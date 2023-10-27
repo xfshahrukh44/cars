@@ -106,7 +106,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="location" id="location" required class="form-control">
-                                                    <option value="">Select Location</option>
+                                                    <option value="">Location</option>
                                                     @foreach($locations as $location)
                                                         <option value="{{$location->name}}" {!! $car->location == $location->name ? 'selected' : '' !!}>{{$location->name}}</option>
                                                     @endforeach
@@ -117,7 +117,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="condition" id="condition" required class="form-control">
-                                                    <option value="">Select Condition</option>
+                                                    <option value="">Condition</option>
                                                     <option value="Like New" {{$car->condition == "Like New" ? 'selected' : ''}}>Like New</option>
                                                     <option value="New" {{$car->condition == "New" ? 'selected' : ''}}>New</option>
                                                     <option value="Used" {{$car->condition == "Used" ? 'selected' : ''}}>Used</option>
@@ -128,7 +128,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="make_id" id="make_id" class="form-control" required>
-                                                    <option value="">Select Make</option>
+                                                    <option value="">Make</option>
                                                     @foreach($makes as $make)
                                                         <option value="{{$make->id}}" {{$car->make_id == $make->id ? 'selected' : ''}}>{{$make->name}}</option>
                                                     @endforeach
@@ -139,7 +139,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="model_id" id="model_id" class="form-control" required>
-                                                    <option value="">Select Model</option>
+                                                    <option value="">Model</option>
 {{--                                                    @foreach($models as $model)--}}
 {{--                                                        <option value="{{$model->id}}" {{$car->model_id == $model->id ? 'selected' : ''}} hidden>{{$model->name}}</option>--}}
 {{--                                                    @endforeach--}}
@@ -168,7 +168,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="fuel_type" id="fuel_type" class="form-control" required>
-                                                    <option value="">Select Fuel Type</option>
+                                                    <option value="">Fuel Type</option>
                                                     <option value="Diesel" {{$car->condition == "Diesel" ? 'selected' : ''}}>Diesel</option>
                                                     <option value="Ethanol" {{$car->condition == "Ethanol" ? 'selected' : ''}}>Ethanol</option>
                                                     <option value="Electric" {{$car->condition == "Electric" ? 'selected' : ''}}>Electric</option>
@@ -183,7 +183,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="transmission" id="transmission" class="form-control" required>
-                                                    <option value="">Select Transmission</option>
+                                                    <option value="">Transmission</option>
                                                     <option value="Automatic" {{$car->condition == "Automatic" ? 'selected' : ''}}>Automatic</option>
                                                     <option value="Manual" {{$car->condition == "Manual" ? 'selected' : ''}}>Manual</option>
                                                     <option value="Semi-automatic" {{$car->condition == "Semi-automatic" ? 'selected' : ''}}>Semi-automatic</option>
@@ -194,7 +194,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="steering" id="steering" class="form-control">
-                                                    <option value="">Select Steering</option>
+                                                    <option value="">Steering</option>
                                                     <option value="LHD" {{$car->condition == "LHD" ? 'selected' : ''}}>LHD</option>
                                                     <option value="RHD" {{$car->condition == "RHD" ? 'selected' : ''}}>RHD</option>
                                                 </select>
@@ -204,7 +204,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="drive" id="drive" class="form-control">
-                                                    <option value="">Select Drive</option>
+                                                    <option value="">Drive</option>
                                                     <option value="FWD" {{$car->condition == "FWD" ? 'selected' : ''}}>FWD</option>
                                                     <option value="RWD" {{$car->condition == "RWD" ? 'selected' : ''}}>RWD</option>
                                                     <option value="AWD" {{$car->condition == "AWD" ? 'selected' : ''}}>AWD</option>
@@ -216,7 +216,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="engine" id="engine" class="form-control">
-                                                    <option value="">Select Engine</option>
+                                                    <option value="">Engine</option>
                                                     <option value="1000" {{$car->condition == "1000" ? 'selected' : ''}}>1000</option>
                                                     <option value="1500" {{$car->condition == "1500" ? 'selected' : ''}}>1500</option>
                                                     <option value="2000" {{$car->condition == "2000" ? 'selected' : ''}}>2000</option>
@@ -308,7 +308,7 @@
             let models = JSON.parse("{{$models}}".replaceAll('&quot;', '"'));
 
             $('#make_id').on('change.select2', function () {
-                $('#model_id').html('<option value="">Select Model</option>');
+                $('#model_id').html('<option value="">Model</option>');
 
                 models.forEach((model) => {
                     $('#model_id').append(model.make_id == $(this).val() ? '<option value="'+model.id+'">'+model.name+'</option>' : '');
