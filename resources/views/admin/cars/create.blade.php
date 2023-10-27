@@ -284,8 +284,8 @@
             $('#drive').select2();
             $('#engine').select2();
 
-            let models = "{{$models}}";
-            models = JSON.parse(models.replaceAll('&quot;', '"'));
+            {{--let models = "{{$models}}";--}}
+            let models = JSON.parse("{{$models}}".replaceAll('&quot;', '"'));
 
             $('#make_id').on('change.select2', function () {
                 let value = $(this).val();
