@@ -34,7 +34,8 @@ class CarController extends Controller
     public function create(Request $request){
         $locations = Location::all();
         $makes = Make::all();
-        $models = CarModel::all();
+        $models = json_encode(CarModel::all()->toArray());
+//        $models = str_replace('&quot;', '"', $models);
         return view('admin.cars.create', compact('locations', 'makes', 'models'));
     }
 

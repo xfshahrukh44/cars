@@ -61,6 +61,10 @@
         .slider.round:before {
             border-radius: 50%;
         }
+
+        .select2-container--default .select2-selection--single {
+            height: 38px !important;
+        }
     </style>
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -130,7 +134,7 @@
                                                 <select name="make_id" id="make_id" class="form-control">
                                                     <option value="">Select Make</option>
                                                     @foreach($makes as $make)
-                                                        <option value="{{$make->name}}">{{$make->name}}</option>
+                                                        <option value="{{$make->id}}">{{$make->name}}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -140,6 +144,9 @@
                                             <div class="form-group">
                                                 <select name="model_id" id="model_id" class="form-control">
                                                     <option value="">Select Model</option>
+{{--                                                    @foreach($models as $model)--}}
+{{--                                                        <option value="{{$model->id}}" data-make="{{$model->make_id}}" hidden>{{$model->name}}</option>--}}
+{{--                                                    @endforeach--}}
                                                 </select>
                                             </div>
                                         </div>
@@ -263,6 +270,44 @@
                 {{--filebrowserUploadMethod: 'form'--}}
             });
         };
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#location').select2();
+            $('#condition').select2();
+            $('#make_id').select2();
+            $('#model_id').select2();
+            $('#fuel_type').select2();
+            $('#transmission').select2();
+            $('#steering').select2();
+            $('#drive').select2();
+            $('#engine').select2();
+
+            let models = "{{$models}}";
+            models = JSON.parse(models.replaceAll('&quot;', '"'));
+
+            $('#make_id').on('change.select2', function () {
+                let value = $(this).val();
+                console.log('models', models);
+                console.log('value', value);
+
+                $('#model_id').html('<option value="">Select Model</option>');
+
+                models.forEach((model) => {
+                    if (model.make_id == value) {
+                        $('#model_id').append('<option value="'+model.id+'">'+model.name+'</option>');
+                    }
+                });
+                $('#model_id').select2('destroy');
+                $('#model_id').select2();
+
+                // $('#model_id').find('option').each(function () {
+                //     console.log($(this).data('make'));
+                //     $(this).prop('hidden', !($(this).data('make') === parseInt(value) || $(this).val() == ""));
+                // });
+            });
+        });
     </script>
 
 @endsection
