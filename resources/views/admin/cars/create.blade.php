@@ -61,10 +61,6 @@
         .slider.round:before {
             border-radius: 50%;
         }
-
-        .select2-container--default .select2-selection--single {
-            height: 38px !important;
-        }
     </style>
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -109,7 +105,7 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="location" id="location" required class="form-control">
+                                                <select name="location" id="location" class="form-control">
                                                     <option value="">Select Location</option>
                                                     @foreach($locations as $location)
                                                         <option value="{{$location->name}}">{{$location->name}}</option>
@@ -120,7 +116,7 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="condition" id="condition" class="form-control">
+                                                <select name="condition" id="condition" class="form-control" required>
                                                     <option value="">Select Condition</option>
                                                     <option value="Like New">Like New</option>
                                                     <option value="New">New</option>
@@ -131,7 +127,7 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="make_id" id="make_id" class="form-control">
+                                                <select name="make_id" id="make_id" class="form-control" required>
                                                     <option value="">Select Make</option>
                                                     @foreach($makes as $make)
                                                         <option value="{{$make->id}}">{{$make->name}}</option>
@@ -142,7 +138,7 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="model_id" id="model_id" class="form-control">
+                                                <select name="model_id" id="model_id" class="form-control" required>
                                                     <option value="">Select Model</option>
 {{--                                                    @foreach($models as $model)--}}
 {{--                                                        <option value="{{$model->id}}" data-make="{{$model->make_id}}" hidden>{{$model->name}}</option>--}}
@@ -153,25 +149,25 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="mileage" id="mileage" placeholder="Mileage" required>
+                                                <input type="text" class="form-control" name="mileage" id="mileage" placeholder="Mileage">
                                             </div>
                                         </div>
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <input type="year" class="form-control" name="year" id="year" placeholder="Year" required>
+                                                <input type="year" class="form-control" name="year" id="year" placeholder="Year">
                                             </div>
                                         </div>
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="exterior_color" id="exterior_color" placeholder="Exterior Color" required>
+                                                <input type="text" class="form-control" name="exterior_color" id="exterior_color" placeholder="Exterior Color">
                                             </div>
                                         </div>
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="fuel_type" id="fuel_type" class="form-control">
+                                                <select name="fuel_type" id="fuel_type" class="form-control" required>
                                                     <option value="">Select Fuel Type</option>
                                                     <option value="Diesel">Diesel</option>
                                                     <option value="Ethanol">Ethanol</option>
@@ -186,7 +182,7 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="transmission" id="transmission" class="form-control">
+                                                <select name="transmission" id="transmission" class="form-control" required>
                                                     <option value="">Select Transmission</option>
                                                     <option value="Automatic">Automatic</option>
                                                     <option value="Manual">Manual</option>
@@ -219,7 +215,7 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="drive" id="drive" class="form-control">
+                                                <select name="engine" id="engine" class="form-control">
                                                     <option value="">Select Engine</option>
                                                     <option value="1000">1000</option>
                                                     <option value="1500">1500</option>
@@ -232,7 +228,7 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <input type="number" step="0.1" class="form-control" name="sales_price" id="sales_price" placeholder="Sales Price" required>
+                                                <input type="number" step="0.1" class="form-control" name="sales_price" id="sales_price" placeholder="Sales Price">
                                             </div>
                                         </div>
 
@@ -288,24 +284,14 @@
             let models = JSON.parse("{{$models}}".replaceAll('&quot;', '"'));
 
             $('#make_id').on('change.select2', function () {
-                let value = $(this).val();
-                console.log('models', models);
-                console.log('value', value);
-
                 $('#model_id').html('<option value="">Select Model</option>');
 
                 models.forEach((model) => {
-                    if (model.make_id == value) {
-                        $('#model_id').append('<option value="'+model.id+'">'+model.name+'</option>');
-                    }
+                    $('#model_id').append(model.make_id == $(this).val() ? '<option value="'+model.id+'">'+model.name+'</option>' : '');
                 });
+
                 $('#model_id').select2('destroy');
                 $('#model_id').select2();
-
-                // $('#model_id').find('option').each(function () {
-                //     console.log($(this).data('make'));
-                //     $(this).prop('hidden', !($(this).data('make') === parseInt(value) || $(this).val() == ""));
-                // });
             });
         });
     </script>

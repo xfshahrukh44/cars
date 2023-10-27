@@ -40,6 +40,10 @@
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 
     <style>
+        .select2-container--default .select2-selection--single {
+            height: 38px !important;
+        }
+
         table.dataTable thead th, table.dataTable thead td {
             border-bottom: 0px;
         }
@@ -104,85 +108,59 @@
                     <li class="nav-item">
                         <a href="{{route('admin.cars')}}"
                            class="nav-link {{ request()->IS('admin/cars') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-user"></i>
+                            <i class="nav-icon fas fa-angle-double-right"></i>
                             <p>Cars</p>
                         </a>
                     </li>
 
-{{--                    <li class="nav-item has-treeview {{ request()->IS('admin/cms/about-us') || request()->IS('admin/cms/home') || request()->IS('admin/cms/benefits') || request()->IS('admin/cms/terms') || request()->IS('admin/cms/privacy') || request()->IS('admin/cms/contact')  ? 'menu-is-opening menu-open' : '' }}">--}}
-{{--                        <a href="#" class="nav-link ">--}}
-{{--                            <i class="nav-icon fas fa-tags fw"></i>--}}
-{{--                            <p>--}}
-{{--                                CMS--}}
-{{--                            </p>--}}
-{{--                        </a>--}}
-{{--                        <ul class="nav nav-treeview"--}}
-{{--                            style="{{ request()->IS('admin/emailsetting') || request()->IS('admin/paymentgatway') ? 'display:block;' : '' }}">--}}
+                    <li class="nav-item has-treeview {{ request()->IS('admin/makes') || request()->IS('admin/models') || request()->IS('admin/locations')  ? 'menu-is-opening menu-open' : '' }}">
+                        <a href="#" class="nav-link ">
+                            <i class="nav-icon fas fa-angle-double-right"></i>
+                            <p>
+                                Options
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview" style="{{ request()->IS('admin/makes') || request()->IS('admin/models') || request()->IS('admin/locations') ? 'display:block;' : '' }}">
 
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('admin.cms.home')}}"--}}
-{{--                                   class="nav-link {{ request()->IS('admin/cms/home') ? 'active' : '' }}">--}}
-{{--                                    <i class="nav-icon fas fa-angle-double-right"></i>--}}
-{{--                                    <p>--}}
-{{--                                        Home--}}
-{{--                                    </p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('admin.cms.benefits')}}"--}}
-{{--                                   class="nav-link {{ request()->IS('admin/cms/benefits') ? 'active' : '' }}">--}}
-{{--                                    <i class="nav-icon fas fa-angle-double-right"></i>--}}
-{{--                                    <p>--}}
-{{--                                        Benefits--}}
-{{--                                    </p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('admin.cms.aboutUs')}}"--}}
-{{--                                   class="nav-link {{ request()->IS('admin/cms/about-us') ? 'active' : '' }}">--}}
-{{--                                    <i class="nav-icon fas fa-angle-double-right"></i>--}}
-{{--                                    <p>--}}
-{{--                                        About Us--}}
-{{--                                    </p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('admin.cms.terms')}}"--}}
-{{--                                   class="nav-link {{ request()->IS('admin/cms/terms') ? 'active' : '' }}">--}}
-{{--                                    <i class="nav-icon fas fa-angle-double-right"></i>--}}
-{{--                                    <p>--}}
-{{--                                        Terms--}}
-{{--                                    </p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('admin.cms.privacy')}}"--}}
-{{--                                   class="nav-link {{ request()->IS('admin/cms/privacy') ? 'active' : '' }}">--}}
-{{--                                    <i class="nav-icon fas fa-angle-double-right"></i>--}}
-{{--                                    <p>--}}
-{{--                                        Privacy--}}
-{{--                                    </p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('admin.cms.contact')}}"--}}
-{{--                                   class="nav-link {{ request()->IS('admin/cms/contact') ? 'active' : '' }}">--}}
-{{--                                    <i class="nav-icon fas fa-angle-double-right"></i>--}}
-{{--                                    <p>--}}
-{{--                                        Contact--}}
-{{--                                    </p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
+                            <li class="nav-item">
+                                <a href="{{route('admin.makes')}}"
+                                   class="nav-link {{ request()->IS('admin/makes') ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-angle-double-right"></i>
+                                    <p>
+                                        Makes
+                                    </p>
+                                </a>
+                            </li>
 
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="{{url('admin/changePassword')}}"--}}
-{{--                           class="nav-link {{ request()->IS('admin/changePassword') ? 'active' : '' }}">--}}
-{{--                            <i class="nav-icon fa fa-comments"></i>--}}
-{{--                            <p>Change Password</p>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                            <li class="nav-item">
+                                <a href="{{route('admin.models')}}"
+                                   class="nav-link {{ request()->IS('admin/models') ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-angle-double-right"></i>
+                                    <p>
+                                        Models
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{{route('admin.locations')}}"
+                                   class="nav-link {{ request()->IS('admin/locations') ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-angle-double-right"></i>
+                                    <p>
+                                        Locations
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{url('admin/changePassword')}}"
+                           class="nav-link {{ request()->IS('admin/changePassword') ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-lock"></i>
+                            <p>Change Password</p>
+                        </a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="dropdown-item nav-link" href="{{ route('logout') }}"
