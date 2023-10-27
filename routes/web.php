@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CarController;
 use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\MakeController;
 use App\Http\Controllers\Admin\ModelController;
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,9 +60,10 @@ Route::namespace('App\Http\Controllers\Admin')->prefix('/admin')->middleware('ad
     Route::delete('locations/destroy/{id}', [LocationController::class, 'destroy']);
 });
 
-Route::get('/', function () {
-    return view('front.search');
-});
+Route::match(['get', 'post'], '/', [FrontController::class, 'search'])->name('front.search');
+//Route::get('/', function () {
+//    return view('front.search');
+//});
 
 Auth::routes();
 

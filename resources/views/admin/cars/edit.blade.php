@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title', isset($attribute->id) ? 'Edit Car' : 'Add Car')
+@section('title', 'Edit Car')
 @section('section')
     <style>
         .switch {
@@ -68,12 +68,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>FAQS Form</h1>
+                        <h1>Car Form</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{url('admin/dashboard')}}">Home</a></li>
-                            <li class="breadcrumb-item active">FAQS Form</li>
+                            <li class="breadcrumb-item active">Car Form</li>
                         </ol>
                     </div>
                 </div>
@@ -85,11 +85,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <!-- left column -->
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Edit FAQS</h3>
+                                <h3 class="card-title">Edit Car</h3>
                             </div>
                             <form class="attribute-form" method="post" action="{{ route('admin.cars.update',$id) }}"
                                   enctype="multipart/form-data">
@@ -97,17 +97,15 @@
                                 <div class="card-body">
 
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <label for="title">Title</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" name="title" id="title" placeholder="Title" required value="{{$car->title}}">
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="location">Location</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="location" id="location" required>
+                                                <select name="location" id="location" required class="form-control">
                                                     <option value="">Select Location</option>
                                                     @foreach($locations as $location)
                                                         <option value="{{$location->name}}" {!! $car->location == $location->name ? 'selected' : '' !!}>{{$location->name}}</option>
@@ -116,10 +114,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="condition">Condition</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="condition" id="condition">
+                                                <select name="condition" id="condition" required class="form-control">
                                                     <option value="">Select Condition</option>
                                                     <option value="Like New" {{$car->condition == "Like New" ? 'selected' : ''}}>Like New</option>
                                                     <option value="New" {{$car->condition == "New" ? 'selected' : ''}}>New</option>
@@ -128,10 +125,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="make_id">Make</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="make_id" id="make_id">
+                                                <select name="make_id" id="make_id" class="form-control" required>
                                                     <option value="">Select Make</option>
                                                     @foreach($makes as $make)
                                                         <option value="{{$make->id}}" {{$car->make_id == $make->id ? 'selected' : ''}}>{{$make->name}}</option>
@@ -140,43 +136,38 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="model_id">Model</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="model_id" id="model_id">
+                                                <select name="model_id" id="model_id" class="form-control" required>
                                                     <option value="">Select Model</option>
-                                                    @foreach($models as $model)
-                                                        <option value="{{$model->id}}" {{$car->model_id == $model->id ? 'selected' : ''}} hidden>{{$model->name}}</option>
-                                                    @endforeach
+{{--                                                    @foreach($models as $model)--}}
+{{--                                                        <option value="{{$model->id}}" {{$car->model_id == $model->id ? 'selected' : ''}} hidden>{{$model->name}}</option>--}}
+{{--                                                    @endforeach--}}
                                                 </select>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="mileage">Mileage</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="mileage" id="mileage" placeholder="Mileage"value=" {{$car->mileage}}" required>
+                                                <input type="text" class="form-control" name="mileage" id="mileage" placeholder="Mileage"value=" {{$car->mileage}}">
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="year">Year</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <input type="year" class="form-control" name="year" id="year" placeholder="Year" value="{{$car->year}}" required>
+                                                <input type="year" class="form-control" name="year" id="year" placeholder="Year" value="{{$car->year}}">
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="exterior_color">Exterior Color</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="exterior_color" id="exterior_color" placeholder="Exterior Color" value="{{$car->exterior_color}}" required>
+                                                <input type="text" class="form-control" name="exterior_color" id="exterior_color" placeholder="Exterior Color" value="{{$car->exterior_color}}">
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="fuel_type">Fuel Type</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="fuel_type" id="fuel_type">
+                                                <select name="fuel_type" id="fuel_type" class="form-control" required>
                                                     <option value="">Select Fuel Type</option>
                                                     <option value="Diesel" {{$car->condition == "Diesel" ? 'selected' : ''}}>Diesel</option>
                                                     <option value="Ethanol" {{$car->condition == "Ethanol" ? 'selected' : ''}}>Ethanol</option>
@@ -189,10 +180,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="transmission">Transmission</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="transmission" id="transmission">
+                                                <select name="transmission" id="transmission" class="form-control" required>
                                                     <option value="">Select Transmission</option>
                                                     <option value="Automatic" {{$car->condition == "Automatic" ? 'selected' : ''}}>Automatic</option>
                                                     <option value="Manual" {{$car->condition == "Manual" ? 'selected' : ''}}>Manual</option>
@@ -201,10 +191,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="steering">Steering</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="steering" id="steering">
+                                                <select name="steering" id="steering" class="form-control">
                                                     <option value="">Select Steering</option>
                                                     <option value="LHD" {{$car->condition == "LHD" ? 'selected' : ''}}>LHD</option>
                                                     <option value="RHD" {{$car->condition == "RHD" ? 'selected' : ''}}>RHD</option>
@@ -212,10 +201,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="drive">Drive</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="drive" id="drive">
+                                                <select name="drive" id="drive" class="form-control">
                                                     <option value="">Select Drive</option>
                                                     <option value="FWD" {{$car->condition == "FWD" ? 'selected' : ''}}>FWD</option>
                                                     <option value="RWD" {{$car->condition == "RWD" ? 'selected' : ''}}>RWD</option>
@@ -225,10 +213,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="drive">Engine</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="drive" id="drive">
+                                                <select name="engine" id="engine" class="form-control">
                                                     <option value="">Select Engine</option>
                                                     <option value="1000" {{$car->condition == "1000" ? 'selected' : ''}}>1000</option>
                                                     <option value="1500" {{$car->condition == "1500" ? 'selected' : ''}}>1500</option>
@@ -239,17 +226,15 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
-                                            <label for="sales_price">Sales Price</label>
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <input type="number" step="0.1" class="form-control" name="sales_price" id="sales_price" placeholder="Sales Price" value="{{$car->sales_price}}" required>
+                                                <input type="number" step="0.1" class="form-control" name="sales_price" id="sales_price" placeholder="Sales Price" value="{{$car->sales_price}}">
                                             </div>
                                         </div>
 
                                         <div class="col-md-12">
-                                            <label for="sales_price">Seller Notes</label>
                                             <div class="form-group">
-                                                <textarea name="seller_notes" id="" cols="30" rows="10">
+                                                <textarea class="form-control" name="seller_notes" id="" cols="30" rows="10">
                                                     {!! $car->seller_notes ?? '' !!}
                                                 </textarea>
                                             </div>
@@ -261,7 +246,7 @@
 
                                 <div class="card-footer text-center">
                                     <button type="submit" id="submit" class="btn btn-primary btn-md">Submit</button>
-                                    <a href="{{route('catalog.attributes')}}" class="btn btn-warning btn-md">Cancel</a>
+{{--                                    <a href="{{route('catalog.attributes')}}" class="btn btn-warning btn-md">Cancel</a>--}}
                                 </div>
                             </form>
                         </div>
@@ -282,6 +267,57 @@
                 {{--filebrowserUploadMethod: 'form'--}}
             });
         };
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#location').select2();
+            $('#condition').select2();
+            $('#make_id').select2();
+            $('#model_id').select2();
+            $('#fuel_type').select2();
+            $('#transmission').select2();
+            $('#steering').select2();
+            $('#drive').select2();
+            $('#engine').select2();
+
+
+            setTimeout(() => {
+                $('#make_id').trigger('change.select2');
+
+                $('#model_id').val('{{$car->model_id}}');
+                $('#model_id').trigger('change.select2');
+
+                $('#fuel_type').val('{{$car->fuel_type}}');
+                $('#fuel_type').trigger('change.select2');
+
+                $('#transmission').val('{{$car->transmission}}');
+                $('#transmission').trigger('change.select2');
+
+                $('#steering').val('{{$car->steering}}');
+                $('#steering').trigger('change.select2');
+
+                $('#drive').val('{{$car->drive}}');
+                $('#drive').trigger('change.select2');
+
+                $('#engine').val('{{$car->engine}}');
+                $('#engine').trigger('change.select2');
+            }, 2000);
+
+            {{--let models = "{{$models}}";--}}
+            let models = JSON.parse("{{$models}}".replaceAll('&quot;', '"'));
+
+            $('#make_id').on('change.select2', function () {
+                $('#model_id').html('<option value="">Select Model</option>');
+
+                models.forEach((model) => {
+                    $('#model_id').append(model.make_id == $(this).val() ? '<option value="'+model.id+'">'+model.name+'</option>' : '');
+                });
+
+                $('#model_id').select2('destroy');
+                $('#model_id').select2();
+            });
+        });
     </script>
 
 @endsection

@@ -20,9 +20,18 @@ class CarController extends Controller
                         $formatedDate = Carbon::createFromFormat('Y-m-d H:i:s', $data->created_at)->format('m-d-Y');
                         return $formatedDate;
                     })
+                    ->addColumn('image', function ($data) {
+                        return '';
+                    })
+                    ->addColumn('make', function ($data) {
+                        return $data->make->name ?? '';
+                    })
+                    ->addColumn('model', function ($data) {
+                        return $data->model->name ?? '';
+                    })
                     ->addColumn('action', function ($data) {
                         return '<a title="Edit" href="cars/edit/' . $data->id . '" class="btn btn-dark btn-sm"><i class="fas fa-pencil-alt"></i></a>&nbsp;<button title="Delete" type="button" name="delete" id="' . $data->id . '" class="delete btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>';
-                    })->rawColumns(['action'])->make(true);
+                    })->rawColumns(['action', 'image'])->make(true);
             }
         } catch (\Exception $ex) {
             return redirect('/')->with('error', $ex->getMessage());
@@ -44,6 +53,7 @@ class CarController extends Controller
             'title' => $request->title,
             'location' => $request->location,
             'condition' => $request->condition,
+            'make_id' => $request->make_id,
             'model_id' => $request->model_id,
             'mileage' => $request->mileage,
             'year' => $request->year,
@@ -61,8 +71,11 @@ class CarController extends Controller
     }
 
     public function edit($id){
+        $locations = Location::all();
+        $makes = Make::all();
+        $models = json_encode(CarModel::all()->toArray());
         $car = Car::where('id',$id)->first();
-        return view('admin.cars.edit',compact('car','id'));
+        return view('admin.cars.edit',compact('car','id', 'locations', 'makes', 'models'));
     }
 
     public function update(Request $request, $id){
@@ -70,6 +83,7 @@ class CarController extends Controller
             'title' => $request->title,
             'location' => $request->location,
             'condition' => $request->condition,
+            'make_id' => $request->make_id,
             'model_id' => $request->model_id,
             'mileage' => $request->mileage,
             'year' => $request->year,
