@@ -317,13 +317,6 @@
     <script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
         var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"{{env('MAIN_SITE_URL')}}","hash_tracking":"false","v4_id":"G-EQZZSN0YR2"};/* ]]> */
     </script>
-    <script type='text/javascript' id='jquery-core-js-extra'>
-        /* <![CDATA[ */
-        var classified_five_vars = {"stm_ajax_get_c_f_user_phone":"12e9f72952"};
-        /* ]]> */
-    </script>
-    <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
-    <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
     <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.3.5' id='tp-tools-js'></script>
     <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.3.5' id='revmin-js'></script>
     <script type='text/javascript' id='ulisting-listing-compare-js-before'>
@@ -17210,9 +17203,6 @@
     var ulisting_wishlist_url ="{{env('MAIN_SITE_URL')}}";
 </script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/plugins/ulisting-wishlist/assets/js/frontend/ulisting-wishlist.js?ver=1.1.2' id='ulisting-wishlist-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/ui/core.min.js?ver=1.13.1' id='jquery-ui-core-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.1' id='jquery-ui-tabs-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.1' id='jquery-ui-menu-js'></script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/dist/dom-ready.min.js?ver=d996b53411d1533a84951212ab6ac4ff' id='wp-dom-ready-js'></script>
@@ -17222,12 +17212,6 @@
     wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 </script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/dist/a11y.min.js?ver=a38319d7ba46c6e60f7f9d4c371222c5' id='wp-a11y-js'></script>
-<script type='text/javascript' id='jquery-ui-autocomplete-js-extra'>
-    /* <![CDATA[ */
-    var uiAutocompleteL10n = {"noResults":"No results found.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate.","itemSelected":"Item selected."};
-    /* ]]> */
-</script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.1' id='jquery-ui-autocomplete-js'></script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/dist/vendor/moment.min.js?ver=2.29.4' id='moment-js'></script>
 <script type='text/javascript' id='moment-js-after'>
     moment.updateLocale( 'en', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"F j, Y","LLL":"F j, Y g:i a","LLLL":null}} );
@@ -17236,7 +17220,6 @@
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/plugins/ulisting/includes/lib/pricing-plan//assets/js/frontend/user-plan-detail.js?ver=2.1.5' id='user-plan-detail-js'></script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/plugins/ulisting/includes/lib/stripe//assets/js/stripe-card-component.js?ver=1.0' id='stripe-card-component-js'></script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/plugins/ulisting/includes/lib/stripe//assets/js/stripe-my-card.js?ver=1.0' id='stripe-my-card-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/plugins/ultimate-social-media-plus/js/shuffle/modernizr.custom.min.js?ver=6.0.2' id='SFSIPLUSjqueryModernizr-js'></script>
 <script type='text/javascript' id='SFSIPLUSCustomJs-js-extra'>
     /* <![CDATA[ */
     var sfsi_plus_ajax_object = {"ajax_url":"{{env('MAIN_SITE_URL')}}/wp-admin/admin-ajax.php","plugin_url":"{{env('MAIN_SITE_URL')}}/wp-/ntent/plugins/ultimate-social-media-plus\/","rest_url":"{{env('MAIN_SITE_URL')}}wp-json\/"};
@@ -17258,12 +17241,6 @@
     /* ]]> */
 </script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/plugins/wordpress-popup/assets/js/front.min.js?ver=4.8.2' id='hustle_front-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/ui/effect.min.js?ver=1.13.1' id='jquery-effects-core-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/ui/effect-slide.min.js?ver=1.13.1' id='jquery-effects-slide-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.1' id='jquery-ui-mouse-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.1' id='jquery-ui-draggable-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-includes/js/jquery/ui/droppable.min.js?ver=1.13.1' id='jquery-ui-droppable-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/themes/motors/assets/js/jquery.uniform.min.js?ver=5.0' id='uniform-js-js'></script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/themes/motors/assets/js/owl.carousel.js?ver=5.0' id='owl.carousel-js'></script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/themes/motors/assets/js/lightgallery-all.js?ver=5.0' id='light-gallery-js'></script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/themes/motors/assets/js/app-listing_five.js?ver=5.0' id='stm-theme-scripts-js'></script>
@@ -17274,7 +17251,6 @@
     /* ]]> */
 </script>
 <script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/plugins/mystickyelements-pro/intl-tel-input-src/build/js/intlTelInput.js?ver=2.0.7' id='intl-tel-input-js-js'></script>
-<script type='text/javascript' src='{{env('MAIN_SITE_URL')}}/wp-content/plugins/mystickyelements-pro/js/jquery.cookie.js?ver=2.0.7' id='mystickyelements-cookie-js-js'></script>
 <script type='text/javascript' id='mystickyelements-fronted-js-js-extra'>
     /* <![CDATA[ */
     var mystickyelements = {"ajaxurl":"http:\/\/gce.test\/wp-admin\/admin-ajax.php","ajax_nonce":"b39b3e1862","google_analytics":""};

@@ -281,7 +281,6 @@
             $('#drive').select2();
             $('#engine').select2();
 
-
             setTimeout(() => {
                 $('#make_id').trigger('change.select2');
 
@@ -302,7 +301,7 @@
 
                 $('#engine').val('{{$car->engine}}');
                 $('#engine').trigger('change.select2');
-            }, 2000);
+            }, 500);
 
             {{--let models = "{{$models}}";--}}
             let models = JSON.parse("{{$models}}".replaceAll('&quot;', '"'));
