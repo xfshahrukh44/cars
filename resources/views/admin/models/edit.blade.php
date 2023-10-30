@@ -147,6 +147,27 @@
             setTimeout(() => {
                 $('#make_id').select2();
             }, 2000)
+
+            let element = jQuery(jQuery('.product_meta')[1]);
+            element.addClass('custom_element');
+            let html = `<div class="custom_dest" style="top: 10px; left: 12px; position: absolute; z-index: 2; opacity: 0; transform: translateX(50px); animation: fadeInRight 1s forwards;">
+                            <i class="fas fa-fire custom_element" style="margin-right: 2px;"></i>` + element.html() + `
+                        </div>`;
+            element.remove();
+
+            //insert css to head
+            jQuery('head').append(`<style>
+                                      @keyframes fadeInRight {
+                                        to {
+                                          opacity: 1;
+                                          transform: translateX(0);
+                                        }
+                                      }
+                                    </style>`);
+
+            jQuery(html).insertBefore('figure.woocommerce-product-gallery__wrapper');
+            jQuery('.custom_element').css('color', 'red');
+            jQuery('.custom_element').parent().find('span').css('color', 'red');
         });
     </script>
 

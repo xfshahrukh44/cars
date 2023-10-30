@@ -62,7 +62,7 @@ class FrontController extends Controller
         ->when(!is_null($filters['engine']), function ($q) use ($filters) { //engine
             return $q->where('engine', $filters['engine']);
         })
-        ->paginate(1)->withQueryString();
+        ->paginate(10)->withQueryString();
 
         return view('front.search', compact('filters', 'locations', 'makes', 'models', 'cars'));
     }
@@ -70,7 +70,6 @@ class FrontController extends Controller
     public function carDetail (Request $request, $id)
     {
         $car = Car::find($id);
-        dd($car);
 
         return view('front.car-detail', compact('car'));
     }
