@@ -52,7 +52,7 @@
                                         <th>S.No</th>
                                         <th>Name</th>
                                         <th>Make</th>
-                                        <th>Created At</th>
+{{--                                        <th>Created At</th>--}}
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -124,7 +124,7 @@
                     {data: 'id', name: 'id'},
                     {data: 'name', name: 'name'},
                     {data: 'make', name: 'make'},
-                    {data: 'created_at', name: 'created_at'},
+                    // {data: 'created_at', name: 'created_at'},
                     {data: 'action', name: 'action', orderable: false}
                 ]
 

@@ -38,6 +38,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         .select2-container--default .select2-selection--single {
@@ -154,13 +155,13 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{{url('admin/changePassword')}}"
-                           class="nav-link {{ request()->IS('admin/changePassword') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-lock"></i>
-                            <p>Change Password</p>
-                        </a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="{{url('admin/changePassword')}}"--}}
+{{--                           class="nav-link {{ request()->IS('admin/changePassword') ? 'active' : '' }}">--}}
+{{--                            <i class="nav-icon fas fa-lock"></i>--}}
+{{--                            <p>Change Password</p>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
 
                     <li class="nav-item">
                         <a class="dropdown-item nav-link" href="{{ route('logout') }}"

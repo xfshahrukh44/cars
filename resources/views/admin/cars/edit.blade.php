@@ -234,6 +234,24 @@
 
                                         <div class="col-md-12">
                                             <div class="form-group">
+                                                <label for="media">Media</label>
+                                                <input type="file" class="form-control" multiple name="media[]" id="media" accept="image/png, image/gif, image/jpeg">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                @foreach($car->car_images as $car_image)
+                                                    <div class="col-md-3">
+                                                        <img src="{{url('storage/images/cars') . '/' . $car_image->url}}" alt="" style="width: inherit; height: inherit; max-height: 400px;">
+                                                        <a class="btn btn-danger" href="{{route('admin.car-images.destroy', $car_image->id)}}" style="position:absolute; top: 4px !important; right: 2px;"><i class="fas fa-trash"></i></a>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
                                                 <textarea class="form-control" name="seller_notes" id="" cols="30" rows="10">
                                                     {!! $car->seller_notes ?? '' !!}
                                                 </textarea>

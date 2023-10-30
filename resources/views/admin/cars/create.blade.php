@@ -234,6 +234,13 @@
 
                                         <div class="col-md-12">
                                             <div class="form-group">
+                                                <label for="media">Media</label>
+                                                <input type="file" class="form-control" multiple name="media[]" id="media" accept="image/png, image/gif, image/jpeg">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
                                                 <label for="seller_notes">Seller Notes</label>
                                                 <textarea class="form-control" name="seller_notes" id="seller_notes" cols="30" rows="10"></textarea>
                                             </div>

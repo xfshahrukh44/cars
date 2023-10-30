@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CarController;
+use App\Http\Controllers\Admin\CarImageController;
 use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\MakeController;
 use App\Http\Controllers\Admin\ModelController;
@@ -35,6 +36,9 @@ Route::namespace('App\Http\Controllers\Admin')->prefix('/admin')->middleware('ad
     Route::post('cars/update/{id}', [CarController::class, 'update'])->name('admin.cars.update');
     Route::delete('cars/destroy/{id}', [CarController::class, 'destroy']);
 
+    //car_image
+    Route::get('cars-image/destroy/{id}', [CarImageController::class, 'destroy'])->name('admin.car-images.destroy');
+
     //make
     Route::get('makes', [MakeController::class, 'index'])->name('admin.makes');
     Route::get('makes/create', [MakeController::class, 'create'])->name('admin.makes.create');
@@ -60,7 +64,8 @@ Route::namespace('App\Http\Controllers\Admin')->prefix('/admin')->middleware('ad
     Route::delete('locations/destroy/{id}', [LocationController::class, 'destroy']);
 });
 
-Route::match(['get', 'post'], '/', [FrontController::class, 'search'])->name('front.search');
+Route::get('/', [FrontController::class, 'search'])->name('front.search');
+Route::get('car/detail/{id}', [FrontController::class, 'carDetail'])->name('front.carDetail');
 //Route::get('/', function () {
 //    return view('front.search');
 //});

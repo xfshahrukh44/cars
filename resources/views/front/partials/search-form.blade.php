@@ -34,6 +34,7 @@
 </style>
 
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.min.css" integrity="sha512-kq3FES+RuuGoBW3a9R2ELYKRywUEQv0wvPTItv3DSGqjpbNtGWVdvT8qwdKkqvPzT93jp8tSF4+oN4IeTEIlQA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 {{--<style>--}}
 {{--    .select2-container--default .select2-selection--single {--}}
 {{--        height: 38px !important;--}}
@@ -55,17 +56,17 @@
 
 <div class="row m-auto" style="padding: 10px; background-color: #ecf1f8; padding-top: 24px;">
     <div class="col-md-12">
-        <form action="{{route('front.search')}}" method="POST">
+        <form action="{{route('front.search')}}" method="GET">
             @csrf
             <div class="row m-auto">
                 <h1 style="font-size: 130%;">SEARCH OPTIONS</h1>
             </div>
             <div class="row">
                 <div class="col-md-3 form-group">
-                    <input class="form-control" type="text" id="search" name="title" value="{{$filters['title']}}" placeholder="Search">
+                    <input class="form-control" type="text" id="search" name="title" value="{{$filters['title']}}" placeholder="Search" style="max-height: 34px;">
                 </div>
                 <div class="col-md-3 form-group">
-                    <input class="form-control" type="text" id="year" name="year" value="{{$filters['year']}}" placeholder="Year">
+                    <input class="form-control" type="text" id="year" name="year" value="{{$filters['year']}}" placeholder="Year" style="max-height: 34px;">
                 </div>
                 <div class="col-md-3 form-group">
                     <select class="form-control" id="condition" name="condition" style="opacity: 100 !important; visibility: inherit !important;">
@@ -148,14 +149,15 @@
 
 <script>
     $(document).ready(function () {
-        jQuery('#location').select2();
-        jQuery('#condition').select2();
-        jQuery('#make_id').select2();
-        jQuery('#model_id').select2();
-        jQuery('#transmission').select2();
-        jQuery('#steering').select2();
-        jQuery('#fuel_type').select2();
-        jQuery('#engine').select2();
+
+        jQuery('#location').select2({theme: 'bootstrap'});
+        jQuery('#condition').select2({theme: 'bootstrap'});
+        jQuery('#make_id').select2({theme: 'bootstrap'});
+        jQuery('#model_id').select2({theme: 'bootstrap'});
+        jQuery('#transmission').select2({theme: 'bootstrap'});
+        jQuery('#steering').select2({theme: 'bootstrap'});
+        jQuery('#fuel_type').select2({theme: 'bootstrap'});
+        jQuery('#engine').select2({theme: 'bootstrap'});
 
         setTimeout(() => {
             jQuery('#make_id').trigger('change.select2');
@@ -196,7 +198,7 @@
             });
 
             jQuery('#model_id').select2('destroy');
-            jQuery('#model_id').select2();
+            jQuery('#model_id').select2({theme: 'bootstrap'});
         });
     });
 </script>

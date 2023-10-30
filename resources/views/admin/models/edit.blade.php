@@ -68,12 +68,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>ModelS Form</h1>
+                        <h1>Model Form</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{url('admin/dashboard')}}">Home</a></li>
-                            <li class="breadcrumb-item active">ModelS Form</li>
+                            <li class="breadcrumb-item active">Model Form</li>
                         </ol>
                     </div>
                 </div>

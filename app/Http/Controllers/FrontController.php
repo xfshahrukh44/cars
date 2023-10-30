@@ -39,8 +39,7 @@ class FrontController extends Controller
             return $q->where('condition', $filters['condition']);
         })
         ->when(!is_null($filters['make_id']), function ($q) use ($filters) { //make_id
-            return $q->where('make_id', $filters['make_id'])
-                ->orWhereHas('model', function ($q) use ($filters) {
+            return $q->whereHas('model', function ($q) use ($filters) {
                     return $q->where('make_id', $filters['make_id']);
                 });
         })
@@ -48,6 +47,7 @@ class FrontController extends Controller
             return $q->where('model_id', $filters['model_id']);
         })
         ->when(!is_null($filters['transmission']), function ($q) use ($filters) { //transmission
+//            dd('here');
             return $q->where('transmission', $filters['transmission']);
         })
         ->when(!is_null($filters['steering']), function ($q) use ($filters) { //steering
@@ -61,8 +61,17 @@ class FrontController extends Controller
         })
         ->when(!is_null($filters['engine']), function ($q) use ($filters) { //engine
             return $q->where('engine', $filters['engine']);
-        })->paginate(10);
+        })
+        ->paginate(1)->withQueryString();
 
         return view('front.search', compact('filters', 'locations', 'makes', 'models', 'cars'));
+    }
+
+    public function carDetail (Request $request, $id)
+    {
+        $car = Car::find($id);
+        dd($car);
+
+        return view('front.car-detail', compact('car'));
     }
 }

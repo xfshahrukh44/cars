@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Car;
+use App\Models\CarImage;
 use App\Models\CarModel;
 use App\Models\Location;
 use App\Models\Make;
@@ -21,7 +22,7 @@ class CarController extends Controller
                         return $formatedDate;
                     })
                     ->addColumn('image', function ($data) {
-                        return '';
+                        return '<img src="'.$data->feature_image().'" width="50" height="50">';
                     })
                     ->addColumn('make', function ($data) {
                         return $data->make->name ?? '';
@@ -44,7 +45,6 @@ class CarController extends Controller
         $locations = Location::all();
         $makes = Make::all();
         $models = json_encode(CarModel::all()->toArray());
-//        $models = str_replace('&quot;', '"', $models);
         return view('admin.cars.create', compact('locations', 'makes', 'models'));
     }
 
@@ -66,6 +66,16 @@ class CarController extends Controller
             'sales_price' => $request->sales_price,
             'seller_notes' => $request->seller_notes,
         ]);
+
+        //media work
+        if ($request->has('media') && count($request->media) > 0) {
+            foreach ($request->media as $media) {
+                $name = uniqid() . '.' . $media->getClientOriginalExtension();
+                $media->storeAs('public/images/cars', $name);
+
+                CarImage::create([ 'car_id' => $car->id, 'url' => $name ]);
+            }
+        }
 
         return redirect(route('admin.cars'));
     }
@@ -96,6 +106,17 @@ class CarController extends Controller
             'sales_price' => $request->sales_price,
             'seller_notes' => $request->seller_notes,
         ]);
+
+        //media work
+        if ($request->has('media') && count($request->media) > 0) {
+            foreach ($request->media as $media) {
+                $name = uniqid() . '.' . $media->getClientOriginalExtension();
+                $media->storeAs('public/images/cars', $name);
+
+                CarImage::create([ 'car_id' => $id, 'url' => $name ]);
+            }
+        }
+
         return redirect(route('admin.cars'));
     }
 
