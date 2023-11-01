@@ -66,10 +66,11 @@ Route::namespace('App\Http\Controllers\Admin')->prefix('/admin')->middleware('ad
 
 Route::get('/', [FrontController::class, 'search'])->name('front.search');
 Route::get('car/detail/{id}', [FrontController::class, 'carDetail'])->name('front.carDetail');
-//Route::get('/', function () {
-//    return view('front.search');
-//});
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/temp', function () {
+//    dd(json_decode(file_get_contents(asset('documents/output.json'))));
+});
