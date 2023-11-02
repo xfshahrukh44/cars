@@ -423,19 +423,8 @@
                 <h1 style="font-size: 130%;">SEARCH OPTIONS</h1>
             </div>
             <div class="row">
-                <div class="col-md-3 form-group">
+                <div class="col-md-12 form-group">
                     <input class="form-control" type="text" id="search" name="title" placeholder="Search" style="max-height: 34px;">
-                </div>
-                <div class="col-md-3 form-group">
-                    <input class="form-control" type="text" id="year" name="year" placeholder="Year" style="max-height: 34px;">
-                </div>
-                <div class="col-md-3 form-group">
-                    <select class="form-control" id="condition" name="condition" style="opacity: 100 !important; visibility: inherit !important;">
-                        <option value="">Condition</option>
-                        <option value="Like New">Like New</option>
-                        <option value="New">New</option>
-                        <option value="Used">Used</option>
-                    </select>
                 </div>
                 <div class="col-md-3 form-group">
                     <select class="form-control" id="make_id" name="make_id" style="opacity: 100 !important; visibility: inherit !important;">
@@ -459,13 +448,6 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
-                    <select class="form-control" id="steering" name="steering" style="opacity: 100 !important; visibility: inherit !important;">
-                        <option value="">Steering</option>
-                        <option value="LHD">LHD</option>
-                        <option value="RHD">RHD</option>
-                    </select>
-                </div>
-                <div class="col-md-3 form-group">
                     <select class="form-control" id="fuel_type" name="fuel_type" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Fuel Type</option>
                         <option value="Diesel">Diesel</option>
@@ -475,6 +457,33 @@
                         <option value="Gasoline">Gasoline</option>
                         <option value="Hybrid">Hybrid</option>
                         <option value="LPG Autogas">LPG Autogas</option>
+                    </select>
+                </div>
+                <div class="col-md-3 form-group">
+                    <select class="form-control" id="drive" name="drive" style="opacity: 100 !important; visibility: inherit !important;">
+                        <option value="">Drive</option>
+                        <option value="FWD">FWD</option>
+                        <option value="RWD">RWD</option>
+                        <option value="AWD">AWD</option>
+                        <option value="4WD">4WD</option>
+                    </select>
+                </div>
+                <div class="col-md-3 form-group">
+                    <select class="form-control" id="steering" name="steering" style="opacity: 100 !important; visibility: inherit !important;">
+                        <option value="">Steering</option>
+                        <option value="LHD">LHD</option>
+                        <option value="RHD">RHD</option>
+                    </select>
+                </div>
+                <div class="col-md-3 form-group">
+                    <input class="form-control" type="text" id="year" name="year" placeholder="Year" style="max-height: 34px;">
+                </div>
+                <div class="col-md-3 form-group">
+                    <select class="form-control" id="condition" name="condition" style="opacity: 100 !important; visibility: inherit !important;">
+                        <option value="">Condition</option>
+                        <option value="Like New">Like New</option>
+                        <option value="New">New</option>
+                        <option value="Used">Used</option>
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
@@ -514,7 +523,7 @@
     document.getElementById("form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
 
-        let url = "{{route('front.search')}}" + '?title='+$('#search').val()+'&year='+$('#year').val()+'&condition='+$('#condition').val()+'&make_id='+$('#make_id').val()+'&model_id='+$('#model_id').val()+'&transmission='+$('#transmission').val()+'&steering='+$('#steering').val()+'&fuel_type='+$('#fuel_type').val()+'&location='+$('#location').val()+'&engine='+$('#engine').val();
+        let url = "{{route('front.search')}}" + '?title='+$('#search').val()+'&year='+$('#year').val()+'&condition='+$('#condition').val()+'&make_id='+$('#make_id').val()+'&model_id='+$('#model_id').val()+'&transmission='+$('#transmission').val()+'&steering='+$('#steering').val()+'&drive='+$('#drive').val()+'&fuel_type='+$('#fuel_type').val()+'&location='+$('#location').val()+'&engine='+$('#engine').val();
 
         // Send a message to the parent window
         parent.postMessage({
@@ -532,6 +541,7 @@
         jQuery('#make_id').select2({theme: 'bootstrap'});
         jQuery('#model_id').select2({theme: 'bootstrap'});
         jQuery('#transmission').select2({theme: 'bootstrap'});
+        jQuery('#drive').select2({theme: 'bootstrap'});
         jQuery('#steering').select2({theme: 'bootstrap'});
         jQuery('#fuel_type').select2({theme: 'bootstrap'});
         jQuery('#engine').select2({theme: 'bootstrap'});

@@ -22,6 +22,7 @@ class FrontController extends Controller
             'make_id' => $request->has('make_id') ? $request->get('make_id') : null,
             'model_id' => $request->has('model_id') ? $request->get('model_id') : null,
             'transmission' => $request->has('transmission') ? $request->get('transmission') : null,
+            'drive' => $request->has('drive') ? $request->get('drive') : null,
             'steering' => $request->has('steering') ? $request->get('steering') : null,
             'fuel_type' => $request->has('fuel_type') ? $request->get('fuel_type') : null,
             'location' => $request->has('location') ? $request->get('location') : null,
@@ -49,6 +50,9 @@ class FrontController extends Controller
         ->when(!is_null($filters['transmission']), function ($q) use ($filters) { //transmission
 //            dd('here');
             return $q->where('transmission', $filters['transmission']);
+        })
+        ->when(!is_null($filters['drive']), function ($q) use ($filters) { //drive
+            return $q->where('drive', $filters['drive']);
         })
         ->when(!is_null($filters['steering']), function ($q) use ($filters) { //steering
             return $q->where('steering', $filters['steering']);
