@@ -511,7 +511,7 @@
         event.preventDefault(); // Prevent the default form submission
 
         // Send a message to the parent window
-        parent.postMessage($('#form').serialize(), "*");
+        parent.postMessage("redirect", "*");
     });
 </script>
 
