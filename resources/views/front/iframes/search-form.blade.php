@@ -417,7 +417,7 @@
 
 <div class="row m-auto" style="padding: 10px; background-color: #ecf1f8; padding-top: 24px;">
     <div class="col-md-12">
-        <form action="{{route('front.search')}}" method="GET">
+        <form id="form" action="{{route('front.search')}}" method="GET">
             @csrf
             <div class="row m-auto">
                 <h1 style="font-size: 130%;">SEARCH OPTIONS</h1>
@@ -505,6 +505,17 @@
         </form>
     </div>
 </div>
+
+<script>
+    document.getElementById("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Send a message to the parent window
+        parent.postMessage($('#form').serialize(), "*");
+    });
+</script>
+
+
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
