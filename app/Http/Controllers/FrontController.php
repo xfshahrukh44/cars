@@ -73,4 +73,14 @@ class FrontController extends Controller
 
         return view('front.car-detail', compact('car'));
     }
+
+    public function iframeSearchForm (Request $request)
+    {
+        $locations = Location::all();
+        $makes = Make::all();
+        $models = json_encode(CarModel::all()->toArray());
+
+        return view('front.iframes.search-form', compact('locations', 'makes', 'models'));
+    }
+
 }

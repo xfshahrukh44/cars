@@ -65,6 +65,7 @@ Route::namespace('App\Http\Controllers\Admin')->prefix('/admin')->middleware('ad
 });
 
 Route::get('/', [FrontController::class, 'search'])->name('front.search');
+Route::get('/iframe/search-form', [FrontController::class, 'iframeSearchForm'])->name('front.iframeSearchForm');
 Route::get('car/detail/{id}', [FrontController::class, 'carDetail'])->name('front.carDetail');
 
 Auth::routes();
