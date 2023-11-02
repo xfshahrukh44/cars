@@ -514,7 +514,7 @@
     document.getElementById("form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
 
-        let url = '?title='+document.getElementById('title').value+'&year='+document.getElementById('year').value+'&condition='+document.getElementById('condition').value+'&make_id='+document.getElementById('make_id').value+'&model_id='+document.getElementById('model_id').value+'&transmission='+document.getElementById('transmission').value+'&steering='+document.getElementById('steering').value+'&fuel_type='+document.getElementById('fuel_type').value+'&location='+document.getElementById('location').value+'&engine='+document.getElementById('engine').value;
+        let url = "{{route('front.search')}}" + '?title='+$('#title').val()+'&year='+$('#year').val()+'&condition='+$('#condition').val()+'&make_id='+$('#make_id').val()+'&model_id='+$('#model_id').val()+'&transmission='+$('#transmission').val()+'&steering='+$('#steering').val()+'&fuel_type='+$('#fuel_type').val()+'&location='+$('#location').val()+'&engine='+$('#engine').val();
 
         // Send a message to the parent window
         parent.postMessage({
