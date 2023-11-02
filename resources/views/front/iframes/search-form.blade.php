@@ -510,8 +510,13 @@
     document.getElementById("form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
 
+        let url = "{{route('front.search')}}" + '?title='+$('#title').val()+'&year='+$('#year').val()+'&condition='+$('#condition').val()+'&make_id='+$('#make_id').val()+'&model_id='+$('#model_id').val()+'&transmission='+$('#transmission').val()+'&steering='+$('#steering').val()+'&fuel_type='+$('#fuel_type').val()+'&location='+$('#location').val()+'&engine='+$('#engine').val();
+
         // Send a message to the parent window
-        parent.postMessage("redirect", "*");
+        parent.postMessage({
+            action: 'redirect',
+            url: url
+        }, "*");
     });
 </script>
 
