@@ -644,7 +644,7 @@
         <div class="top-bar-wrap">
             <div class="container">
                 <div class="stm-c-f-top-bar">
-                    <div class="gtranslate_wrapper" id="gt-wrapper-32582051"></div>
+                    <div class="gtranslate_wrapper" id="gt-wrapper-54860912"></div>
                     <div class="stm-top-address-wrap">
                         <div id="japan-time"></div>
                         <script>
