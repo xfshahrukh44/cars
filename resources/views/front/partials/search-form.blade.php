@@ -54,6 +54,13 @@
 
 {{--</style>--}}
 
+@php
+    $years = [];
+    for ($i = 2024; $i > 1984; $i--) {
+        $years []= strval($i);
+    }
+@endphp
+
 <div class="row m-auto" style="padding: 10px; background-color: #ecf1f8; padding-top: 24px;">
     <div class="col-md-12">
         <form action="{{route('front.search')}}" method="GET">
@@ -115,10 +122,20 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
-                    <input class="form-control" type="text" id="year_from" name="year_from" value="{{$filters['year_from']}}" placeholder="Year From" style="max-height: 34px;">
+                    <select class="form-control" id="year_from" name="year_from" style="opacity: 100 !important; visibility: inherit !important;">
+                        <option value="">Year From</option>
+                        @foreach($years as $year)
+                            <option value="{{$year}}" {!! $filters['year_from'] == $year ? 'selected' : '' !!}>{{$year}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="col-md-3 form-group">
-                    <input class="form-control" type="text" id="year_to" name="year_to" value="{{$filters['year_to']}}" placeholder="Year To" style="max-height: 34px;">
+                    <select class="form-control" id="year_to" name="year_to" style="opacity: 100 !important; visibility: inherit !important;">
+                        <option value="">Year To</option>
+                        @foreach($years as $year)
+                            <option value="{{$year}}" {!! $filters['year_to'] == $year ? 'selected' : '' !!}>{{$year}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="col-md-3 form-group">
                     <select class="form-control" id="condition" name="condition" style="opacity: 100 !important; visibility: inherit !important;">
@@ -163,6 +180,8 @@
     $(document).ready(function () {
 
         jQuery('#location').select2({theme: 'bootstrap'});
+        jQuery('#year_from').select2({theme: 'bootstrap'});
+        jQuery('#year_to').select2({theme: 'bootstrap'});
         jQuery('#condition').select2({theme: 'bootstrap'});
         jQuery('#make_id').select2({theme: 'bootstrap'});
         jQuery('#model_id').select2({theme: 'bootstrap'});
@@ -177,6 +196,12 @@
 
             jQuery('#location').val('{{$filters['location']}}');
             jQuery('#location').trigger('change.select2');
+
+            jQuery('#year_from').val('{{$filters['year_from']}}');
+            jQuery('#year_from').trigger('change.select2');
+
+            jQuery('#year_to').val('{{$filters['year_to']}}');
+            jQuery('#year_to').trigger('change.select2');
 
             jQuery('#condition').val('{{$filters['condition']}}');
             jQuery('#condition').trigger('change.select2');
