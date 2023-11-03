@@ -430,10 +430,10 @@
                 <h1 style="font-size: 130%;">SEARCH OPTIONS</h1>
             </div>
             <div class="row">
-                <div class="col-md-12 form-group">
+                <div class="col-md-12 col-12 form-group">
                     <input class="form-control" type="text" id="search" name="title" placeholder="Search" style="max-height: 34px;">
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 col-3 form-group">
                     <select class="form-control" id="make_id" name="make_id" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Make</option>
                         @foreach($makes as $make)
@@ -441,12 +441,12 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 form-group">
                     <select class="form-control" id="model_id" name="model_id" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Model</option>
                     </select>
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 form-group">
                     <select class="form-control" id="transmission" name="transmission" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Transmission</option>
                         <option value="Automatic">Automatic</option>
@@ -454,7 +454,7 @@
                         <option value="Semi-Automatic">Semi-Automatic</option>
                     </select>
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 form-group">
                     <select class="form-control" id="fuel_type" name="fuel_type" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Fuel Type</option>
                         <option value="Diesel">Diesel</option>
@@ -466,7 +466,7 @@
                         <option value="LPG Autogas">LPG Autogas</option>
                     </select>
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 form-group">
                     <select class="form-control" id="drive" name="drive" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Drive</option>
                         <option value="FWD">FWD</option>
@@ -475,14 +475,14 @@
                         <option value="4WD">4WD</option>
                     </select>
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 form-group">
                     <select class="form-control" id="steering" name="steering" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Steering</option>
                         <option value="LHD">LHD</option>
                         <option value="RHD">RHD</option>
                     </select>
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 form-group">
                     <select class="form-control" id="year_from" name="year_from" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Year From</option>
                         @foreach($years as $year)
@@ -490,7 +490,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 form-group">
                     <select class="form-control" id="year_to" name="year_to" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Year To</option>
                         @foreach($years as $year)
@@ -498,7 +498,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 form-group">
                     <select class="form-control" id="condition" name="condition" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Condition</option>
                         <option value="Like New">Like New</option>
@@ -506,7 +506,7 @@
                         <option value="Used">Used</option>
                     </select>
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 form-group">
                     <select class="form-control" id="location" name="location" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Location</option>
                         @foreach($locations as $location)
@@ -514,7 +514,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col-md-3 form-group">
+                <div class="col-md-3 col-3 form-group">
                     <select class="form-control" id="engine" name="engine" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Engine</option>
                         <option value="1000">1000</option>
