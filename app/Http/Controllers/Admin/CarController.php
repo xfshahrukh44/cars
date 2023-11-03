@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Car;
+use App\Models\CarImage;
 use App\Models\CarModel;
 use App\Models\Location;
 use App\Models\Make;
@@ -20,9 +21,18 @@ class CarController extends Controller
                         $formatedDate = Carbon::createFromFormat('Y-m-d H:i:s', $data->created_at)->format('m-d-Y');
                         return $formatedDate;
                     })
+                    ->addColumn('image', function ($data) {
+                        return '<img src="'.$data->feature_image().'" width="50" height="50">';
+                    })
+                    ->addColumn('make', function ($data) {
+                        return $data->make->name ?? '';
+                    })
+                    ->addColumn('model', function ($data) {
+                        return $data->model->name ?? '';
+                    })
                     ->addColumn('action', function ($data) {
                         return '<a title="Edit" href="cars/edit/' . $data->id . '" class="btn btn-dark btn-sm"><i class="fas fa-pencil-alt"></i></a>&nbsp;<button title="Delete" type="button" name="delete" id="' . $data->id . '" class="delete btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>';
-                    })->rawColumns(['action'])->make(true);
+                    })->rawColumns(['action', 'image'])->make(true);
             }
         } catch (\Exception $ex) {
             return redirect('/')->with('error', $ex->getMessage());
@@ -35,7 +45,6 @@ class CarController extends Controller
         $locations = Location::all();
         $makes = Make::all();
         $models = json_encode(CarModel::all()->toArray());
-//        $models = str_replace('&quot;', '"', $models);
         return view('admin.cars.create', compact('locations', 'makes', 'models'));
     }
 
@@ -44,6 +53,7 @@ class CarController extends Controller
             'title' => $request->title,
             'location' => $request->location,
             'condition' => $request->condition,
+            'make_id' => $request->make_id,
             'model_id' => $request->model_id,
             'mileage' => $request->mileage,
             'year' => $request->year,
@@ -57,12 +67,25 @@ class CarController extends Controller
             'seller_notes' => $request->seller_notes,
         ]);
 
+        //media work
+        if ($request->has('media') && count($request->media) > 0) {
+            foreach ($request->media as $media) {
+                $name = uniqid() . '.' . $media->getClientOriginalExtension();
+                $media->storeAs('public/images/cars', $name);
+
+                CarImage::create([ 'car_id' => $car->id, 'url' => $name ]);
+            }
+        }
+
         return redirect(route('admin.cars'));
     }
 
     public function edit($id){
+        $locations = Location::all();
+        $makes = Make::all();
+        $models = json_encode(CarModel::all()->toArray());
         $car = Car::where('id',$id)->first();
-        return view('admin.cars.edit',compact('car','id'));
+        return view('admin.cars.edit',compact('car','id', 'locations', 'makes', 'models'));
     }
 
     public function update(Request $request, $id){
@@ -70,6 +93,7 @@ class CarController extends Controller
             'title' => $request->title,
             'location' => $request->location,
             'condition' => $request->condition,
+            'make_id' => $request->make_id,
             'model_id' => $request->model_id,
             'mileage' => $request->mileage,
             'year' => $request->year,
@@ -82,6 +106,17 @@ class CarController extends Controller
             'sales_price' => $request->sales_price,
             'seller_notes' => $request->seller_notes,
         ]);
+
+        //media work
+        if ($request->has('media') && count($request->media) > 0) {
+            foreach ($request->media as $media) {
+                $name = uniqid() . '.' . $media->getClientOriginalExtension();
+                $media->storeAs('public/images/cars', $name);
+
+                CarImage::create([ 'car_id' => $id, 'url' => $name ]);
+            }
+        }
+
         return redirect(route('admin.cars'));
     }
 

@@ -15,14 +15,14 @@ class ModelController extends Controller
         try {
             if (request()->ajax()) {
                 return datatables()->of(CarModel::with('make')->get())
-                    ->editColumn('created_at', function($data){
-                        if (is_null($data->created_at)) {
-                            return '';
-                        }
-
-                        $formatedDate = Carbon::createFromFormat('Y-m-d H:i:s', $data->created_at)->format('m-d-Y');
-                        return $formatedDate;
-                    })
+//                    ->editColumn('created_at', function($data){
+//                        if (is_null($data->created_at)) {
+//                            return '';
+//                        }
+//
+//                        $formatedDate = Carbon::createFromFormat('Y-m-d H:i:s', $data->created_at)->format('m-d-Y');
+//                        return $formatedDate;
+//                    })
                     ->addColumn('make', function ($data) {
                         return $data->make->name ?? '';
                     })

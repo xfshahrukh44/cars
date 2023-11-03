@@ -16,14 +16,14 @@ class LocationController extends Controller
         try {
             if (request()->ajax()) {
                 return datatables()->of(Location::get())
-                    ->editColumn('created_at', function($data){
-                        if (is_null($data->created_at)) {
-                            return '';
-                        }
-
-                        $formatedDate = Carbon::createFromFormat('Y-m-d H:i:s', $data->created_at)->format('m-d-Y');
-                        return $formatedDate;
-                    })
+//                    ->editColumn('created_at', function($data){
+//                        if (is_null($data->created_at)) {
+//                            return '';
+//                        }
+//
+//                        $formatedDate = Carbon::createFromFormat('Y-m-d H:i:s', $data->created_at)->format('m-d-Y');
+//                        return $formatedDate;
+//                    })
                     ->addColumn('action', function ($data) {
                         return '<a title="Edit" href="locations/edit/' . $data->id . '" class="btn btn-dark btn-sm"><i class="fas fa-pencil-alt"></i></a>&nbsp;<button title="Delete" type="button" name="delete" id="' . $data->id . '" class="delete btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>';
                     })->rawColumns(['action'])->make(true);

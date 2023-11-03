@@ -36,4 +36,30 @@ class Car extends Model
     {
         return $this->belongsTo(CarModel::class, 'model_id', 'id');
     }
+
+    public function car_images ()
+    {
+        return $this->hasMany(CarImage::class);
+    }
+
+    public function feature_image ()
+    {
+        return $this->car_images()->count() > 0 ? (url('storage/images/cars') . '/' . $this->car_images()->first()->url) : asset('images/cars/no-image.jpg');
+    }
+
+    public function images_array ()
+    {
+        if ($this->car_images()->count() == 0) {
+            return [
+                asset('images/cars/no-image.jpg'),
+            ];
+        }
+
+        $array = [];
+        foreach ($this->car_images as $car_image) {
+            $array []= (url('storage/images/cars') . '/' . $car_image->url);
+        }
+
+        return $array;
+    }
 }

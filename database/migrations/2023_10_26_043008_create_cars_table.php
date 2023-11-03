@@ -18,8 +18,8 @@ class CreateCarsTable extends Migration
             $table->string('title');
             $table->string('location')->nullable();
             $table->string('condition')->nullable();
-            $table->integer('make_id');
-            $table->integer('model_id');
+            $table->integer('make_id')->nullable();
+            $table->integer('model_id')->nullable();
             $table->string('mileage')->nullable();
             $table->string('year')->nullable();
             $table->string('exterior_color')->nullable();

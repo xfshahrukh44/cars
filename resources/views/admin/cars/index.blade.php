@@ -50,8 +50,10 @@
                                     <thead>
                                     <tr style="text-align: center">
                                         <th>S.No</th>
-                                        <th>Title</th>
                                         <th>Image</th>
+                                        <th>Title</th>
+                                        <th>Make</th>
+                                        <th>Model</th>
                                         <th>Created At</th>
                                         <th>Action</th>
                                     </tr>
@@ -122,8 +124,10 @@
                 columns: [
 
                     {data: 'id', name: 'id'},
-                    {data: 'title', name: 'title'},
                     {data: 'image', name: 'image'},
+                    {data: 'title', name: 'title'},
+                    {data: 'make', name: 'make'},
+                    {data: 'model', name: 'model'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'action', name: 'action', orderable: false}
                 ]

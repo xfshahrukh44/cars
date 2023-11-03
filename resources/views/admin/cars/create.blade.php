@@ -106,7 +106,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="location" id="location" class="form-control">
-                                                    <option value="">Select Location</option>
+                                                    <option value="">Location</option>
                                                     @foreach($locations as $location)
                                                         <option value="{{$location->name}}">{{$location->name}}</option>
                                                     @endforeach
@@ -117,7 +117,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="condition" id="condition" class="form-control" required>
-                                                    <option value="">Select Condition</option>
+                                                    <option value="">Condition</option>
                                                     <option value="Like New">Like New</option>
                                                     <option value="New">New</option>
                                                     <option value="Used">Used</option>
@@ -128,7 +128,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="make_id" id="make_id" class="form-control" required>
-                                                    <option value="">Select Make</option>
+                                                    <option value="">Make</option>
                                                     @foreach($makes as $make)
                                                         <option value="{{$make->id}}">{{$make->name}}</option>
                                                     @endforeach
@@ -139,7 +139,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="model_id" id="model_id" class="form-control" required>
-                                                    <option value="">Select Model</option>
+                                                    <option value="">Model</option>
 {{--                                                    @foreach($models as $model)--}}
 {{--                                                        <option value="{{$model->id}}" data-make="{{$model->make_id}}" hidden>{{$model->name}}</option>--}}
 {{--                                                    @endforeach--}}
@@ -168,7 +168,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="fuel_type" id="fuel_type" class="form-control" required>
-                                                    <option value="">Select Fuel Type</option>
+                                                    <option value="">Fuel Type</option>
                                                     <option value="Diesel">Diesel</option>
                                                     <option value="Ethanol">Ethanol</option>
                                                     <option value="Electric">Electric</option>
@@ -183,7 +183,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="transmission" id="transmission" class="form-control" required>
-                                                    <option value="">Select Transmission</option>
+                                                    <option value="">Transmission</option>
                                                     <option value="Automatic">Automatic</option>
                                                     <option value="Manual">Manual</option>
                                                     <option value="Semi-automatic">Semi-automatic</option>
@@ -194,7 +194,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="steering" id="steering" class="form-control">
-                                                    <option value="">Select Steering</option>
+                                                    <option value="">Steering</option>
                                                     <option value="LHD">LHD</option>
                                                     <option value="RHD">RHD</option>
                                                 </select>
@@ -204,7 +204,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="drive" id="drive" class="form-control">
-                                                    <option value="">Select Drive</option>
+                                                    <option value="">Drive</option>
                                                     <option value="FWD">FWD</option>
                                                     <option value="RWD">RWD</option>
                                                     <option value="AWD">AWD</option>
@@ -216,7 +216,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <select name="engine" id="engine" class="form-control">
-                                                    <option value="">Select Engine</option>
+                                                    <option value="">Engine</option>
                                                     <option value="1000">1000</option>
                                                     <option value="1500">1500</option>
                                                     <option value="2000">2000</option>
@@ -229,6 +229,13 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <input type="number" step="0.1" class="form-control" name="sales_price" id="sales_price" placeholder="Sales Price">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="media">Media</label>
+                                                <input type="file" class="form-control" multiple name="media[]" id="media" accept="image/png, image/gif, image/jpeg">
                                             </div>
                                         </div>
 
@@ -284,7 +291,7 @@
             let models = JSON.parse("{{$models}}".replaceAll('&quot;', '"'));
 
             $('#make_id').on('change.select2', function () {
-                $('#model_id').html('<option value="">Select Model</option>');
+                $('#model_id').html('<option value="">Model</option>');
 
                 models.forEach((model) => {
                     $('#model_id').append(model.make_id == $(this).val() ? '<option value="'+model.id+'">'+model.name+'</option>' : '');
