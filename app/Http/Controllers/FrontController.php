@@ -17,7 +17,8 @@ class FrontController extends Controller
         $models = json_encode(CarModel::all()->toArray());
         $filters = [
             'title' => $request->has('title') ? $request->get('title') : null,
-            'year' => $request->has('year') ? $request->get('year') : null,
+            'year_from' => $request->has('year_from') ? $request->get('year_from') : null,
+            'year_to' => $request->has('year_to') ? $request->get('year_to') : null,
             'condition' => $request->has('condition') ? $request->get('condition') : null,
             'make_id' => $request->has('make_id') ? $request->get('make_id') : null,
             'model_id' => $request->has('model_id') ? $request->get('model_id') : null,
@@ -33,8 +34,11 @@ class FrontController extends Controller
         ->when(!is_null($filters['title']), function ($q) use ($filters) { //title
             return $q->where('title', 'LIKE', '%'.$filters['title'].'%');
         })
-        ->when(!is_null($filters['year']), function ($q) use ($filters) { //year
-            return $q->where('year', $filters['year']);
+        ->when(!is_null($filters['year_from']), function ($q) use ($filters) { //year_from
+            return $q->where('year', '>=', $filters['year_from']);
+        })
+        ->when(!is_null($filters['year_to']), function ($q) use ($filters) { //year_to
+            return $q->where('year', '<=', $filters['year_to']);
         })
         ->when(!is_null($filters['condition']), function ($q) use ($filters) { //condition
             return $q->where('condition', $filters['condition']);

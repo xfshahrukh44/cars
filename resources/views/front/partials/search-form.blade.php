@@ -115,7 +115,10 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
-                    <input class="form-control" type="text" id="year" name="year" value="{{$filters['year']}}" placeholder="Year" style="max-height: 34px;">
+                    <input class="form-control" type="text" id="year_from" name="year_from" value="{{$filters['year_from']}}" placeholder="Year From" style="max-height: 34px;">
+                </div>
+                <div class="col-md-3 form-group">
+                    <input class="form-control" type="text" id="year_to" name="year_to" value="{{$filters['year_to']}}" placeholder="Year To" style="max-height: 34px;">
                 </div>
                 <div class="col-md-3 form-group">
                     <select class="form-control" id="condition" name="condition" style="opacity: 100 !important; visibility: inherit !important;">
