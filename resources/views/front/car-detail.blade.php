@@ -720,6 +720,7 @@
                                             <li id="menu-item-1545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1545"><a href="{{env('MAIN_SITE_URL')}}/terms-of-use/">Terms of Use</a></li>
                                         </ul>
                                     </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6433"><a href="{{env('MAIN_SITE_URL')}}/inquiry/">Customer Inquiry Form</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -740,12 +741,13 @@
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1545"><a href="{{env('MAIN_SITE_URL')}}/terms-of-use/">Terms of Use</a></li>
                                         </ul>
                                     </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6433"><a href="{{env('MAIN_SITE_URL')}}/inquiry/">Customer Inquiry Form</a></li>
                                 </ul>
                             </div>
-                            <div class="stm-c-f-add-btn-wrap">
-                                <a class="add-listing-btn stm-button heading-font" href="https://gcejapan.jp/contact-us/">
-                                    <i class=" icon-ap-latter" style="color: ; font-size: 15px;"></i> Contact Us </a>
-                            </div>
+{{--                            <div class="stm-c-f-add-btn-wrap">--}}
+{{--                                <a class="add-listing-btn stm-button heading-font" href="https://gcejapan.jp/contact-us/">--}}
+{{--                                    <i class=" icon-ap-latter" style="color: ; font-size: 15px;"></i> Contact Us </a>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                 </div>
