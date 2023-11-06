@@ -709,7 +709,7 @@
                             <div class="mobile-menu-wrap">
                                 <ul class="header-menu clearfix">
                                     <li id="menu-item-1594" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1594"><a href="/">Home</a></li>
-                                    <li id="menu-item-1688" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1688"><a href="/cars">Cars</a></li>
+                                    <li id="menu-item-1688" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1688"><a href="/cars/public">Cars</a></li>
                                     <li id="menu-item-2818" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2818"><a href="{{env('MAIN_SITE_URL')}}/local-partners/">Local Partners</a></li>
                                     <li id="menu-item-1754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1754"><a href="{{env('MAIN_SITE_URL')}}/why-choose-us/">Why Choose Us</a></li>
                                     <li id="menu-item-881" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-881"><a href="{{env('MAIN_SITE_URL')}}/new-about-us/">About us</a>
