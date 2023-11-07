@@ -54,6 +54,7 @@
                                         <th>Title</th>
                                         <th>Make</th>
                                         <th>Model</th>
+                                        <th>Reference Link</th>
                                         <th>Created At</th>
                                         <th>Action</th>
                                     </tr>
@@ -128,6 +129,7 @@
                     {data: 'title', name: 'title'},
                     {data: 'make', name: 'make'},
                     {data: 'model', name: 'model'},
+                    {data: 'reference_link', name: 'reference_link'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'action', name: 'action', orderable: false}
                 ]

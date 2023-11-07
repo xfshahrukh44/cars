@@ -447,6 +447,24 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
+                    <select class="form-control" id="body_type" name="body_type" style="opacity: 100 !important; visibility: inherit !important;">
+                        <option value="">Body Type</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Station Wagon">Station Wagon</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Van">Van</option>
+                        <option value="Mini Van">Mini Van</option>
+                        <option value="Wagon">Wagon</option>
+                        <option value="Convertible">Convertible</option>
+                        <option value="Bus">Bus</option>
+                        <option value="Truck">Truck</option>
+                        <option value="Heavy Equipment">Heavy Equipment</option>
+                    </select>
+                </div>
+                <div class="col-md-3 form-group">
                     <select class="form-control" id="transmission" name="transmission" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Transmission</option>
                         <option value="Automatic">Automatic</option>
@@ -562,6 +580,7 @@
         jQuery('#condition').select2({theme: 'bootstrap'});
         jQuery('#make_id').select2({theme: 'bootstrap'});
         jQuery('#model_id').select2({theme: 'bootstrap'});
+        jQuery('#body_type').select2({theme: 'bootstrap'});
         jQuery('#transmission').select2({theme: 'bootstrap'});
         jQuery('#drive').select2({theme: 'bootstrap'});
         jQuery('#steering').select2({theme: 'bootstrap'});

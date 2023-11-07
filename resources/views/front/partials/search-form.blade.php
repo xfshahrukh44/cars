@@ -86,6 +86,24 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
+                    <select class="form-control" id="body_type" name="body_type" style="opacity: 100 !important; visibility: inherit !important;">
+                        <option value="">Body Type</option>
+                        <option value="Sedan" {!! $filters['transmission'] == "Sedan" ? 'selected' : '' !!}>Sedan</option>
+                        <option value="Coupe" {!! $filters['transmission'] == "Coupe" ? 'selected' : '' !!}>Coupe</option>
+                        <option value="Hatchback" {!! $filters['transmission'] == "Hatchback" ? 'selected' : '' !!}>Hatchback</option>
+                        <option value="Station Wagon" {!! $filters['transmission'] == "Station Wagon" ? 'selected' : '' !!}>Station Wagon</option>
+                        <option value="SUV" {!! $filters['transmission'] == "SUV" ? 'selected' : '' !!}>SUV</option>
+                        <option value="Pickup" {!! $filters['transmission'] == "Pickup" ? 'selected' : '' !!}>Pickup</option>
+                        <option value="Van" {!! $filters['transmission'] == "Van" ? 'selected' : '' !!}>Van</option>
+                        <option value="Mini Van" {!! $filters['transmission'] == "Mini Van" ? 'selected' : '' !!}>Mini Van</option>
+                        <option value="Wagon" {!! $filters['transmission'] == "Wagon" ? 'selected' : '' !!}>Wagon</option>
+                        <option value="Convertible" {!! $filters['transmission'] == "Convertible" ? 'selected' : '' !!}>Convertible</option>
+                        <option value="Bus" {!! $filters['transmission'] == "Bus" ? 'selected' : '' !!}>Bus</option>
+                        <option value="Truck" {!! $filters['transmission'] == "Truck" ? 'selected' : '' !!}>Truck</option>
+                        <option value="Heavy Equipment" {!! $filters['transmission'] == "Heavy Equipment" ? 'selected' : '' !!}>Heavy Equipment</option>
+                    </select>
+                </div>
+                <div class="col-md-3 form-group">
                     <select class="form-control" id="transmission" name="transmission" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Transmission</option>
                         <option value="Automatic" {!! $filters['transmission'] == "Automatic" ? 'selected' : '' !!}>Automatic</option>
@@ -185,6 +203,7 @@
         jQuery('#condition').select2({theme: 'bootstrap'});
         jQuery('#make_id').select2({theme: 'bootstrap'});
         jQuery('#model_id').select2({theme: 'bootstrap'});
+        jQuery('#body_type').select2({theme: 'bootstrap'});
         jQuery('#transmission').select2({theme: 'bootstrap'});
         jQuery('#drive').select2({theme: 'bootstrap'});
         jQuery('#steering').select2({theme: 'bootstrap'});
@@ -211,6 +230,9 @@
 
             jQuery('#model_id').val('{{$filters['model_id']}}');
             jQuery('#model_id').trigger('change.select2');
+
+            jQuery('#body_type').val('{{$filters['body_type']}}');
+            jQuery('#body_type').trigger('change.select2');
 
             jQuery('#transmission').val('{{$filters['transmission']}}');
             jQuery('#transmission').trigger('change.select2');

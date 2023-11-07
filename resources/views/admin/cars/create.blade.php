@@ -149,6 +149,27 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
+                                                <select name="body_type" id="body_type" class="form-control">
+                                                    <option value="">Body Type</option>
+                                                    <option value="Sedan">Sedan</option>
+                                                    <option value="Coupe">Coupe</option>
+                                                    <option value="Hatchback">Hatchback</option>
+                                                    <option value="Station Wagon">Station Wagon</option>
+                                                    <option value="SUV">SUV</option>
+                                                    <option value="Pickup">Pickup</option>
+                                                    <option value="Van">Van</option>
+                                                    <option value="Mini Van">Mini Van</option>
+                                                    <option value="Wagon">Wagon</option>
+                                                    <option value="Convertible">Convertible</option>
+                                                    <option value="Bus">Bus</option>
+                                                    <option value="Truck">Truck</option>
+                                                    <option value="Heavy Equipment">Heavy Equipment</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
                                                 <input type="text" class="form-control" name="mileage" id="mileage" placeholder="Mileage">
                                             </div>
                                         </div>
@@ -234,6 +255,12 @@
 
                                         <div class="col-md-12">
                                             <div class="form-group">
+                                                <input type="text" class="form-control" name="reference_link" id="reference_link" placeholder="Reference Link">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
                                                 <label for="media">Media</label>
                                                 <input type="file" class="form-control" multiple name="media[]" id="media" accept="image/png, image/gif, image/jpeg">
                                             </div>
@@ -277,10 +304,21 @@
 
     <script>
         $(document).ready(function () {
+            //ckeditor
+            ClassicEditor
+                .create( document.querySelector( '#seller_notes' ) )
+                .then( editor => {
+                    console.log( editor );
+                } )
+                .catch( error => {
+                    console.error( error );
+                } );
+
             $('#location').select2();
             $('#condition').select2();
             $('#make_id').select2();
             $('#model_id').select2();
+            $('#body_type').select2();
             $('#fuel_type').select2();
             $('#transmission').select2();
             $('#steering').select2();
