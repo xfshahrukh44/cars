@@ -149,6 +149,27 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
+                                                <select name="body_type" id="body_type" class="form-control">
+                                                    <option value="">Body Type</option>
+                                                    <option value="Sedan" {{$car->body_type == "Sedan" ? 'selected' : ''}}>Sedan</option>
+                                                    <option value="Coupe" {{$car->body_type == "Coupe" ? 'selected' : ''}}>Coupe</option>
+                                                    <option value="Hatchback" {{$car->body_type == "Hatchback" ? 'selected' : ''}}>Hatchback</option>
+                                                    <option value="Station Wagon" {{$car->body_type == "Station Wagon" ? 'selected' : ''}}>Station Wagon</option>
+                                                    <option value="SUV" {{$car->body_type == "SUV" ? 'selected' : ''}}>SUV</option>
+                                                    <option value="Pickup" {{$car->body_type == "Pickup" ? 'selected' : ''}}>Pickup</option>
+                                                    <option value="Van" {{$car->body_type == "Van" ? 'selected' : ''}}>Van</option>
+                                                    <option value="Mini Van" {{$car->body_type == "Mini Van" ? 'selected' : ''}}>Mini Van</option>
+                                                    <option value="Wagon" {{$car->body_type == "Wagon" ? 'selected' : ''}}>Wagon</option>
+                                                    <option value="Convertible" {{$car->body_type == "Convertible" ? 'selected' : ''}}>Convertible</option>
+                                                    <option value="Bus" {{$car->body_type == "Bus" ? 'selected' : ''}}>Bus</option>
+                                                    <option value="Truck" {{$car->body_type == "Truck" ? 'selected' : ''}}>Truck</option>
+                                                    <option value="Heavy Equipment" {{$car->body_type == "Heavy Equipment" ? 'selected' : ''}}>Heavy Equipment</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
                                                 <input type="text" class="form-control" name="mileage" id="mileage" placeholder="Mileage"value=" {{$car->mileage}}">
                                             </div>
                                         </div>
@@ -234,6 +255,12 @@
 
                                         <div class="col-md-12">
                                             <div class="form-group">
+                                                <input type="text" class="form-control" name="reference_link" id="reference_link" placeholder="Reference Link" value="{{$car->reference_link}}">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
                                                 <label for="media">Media</label>
                                                 <input type="file" class="form-control" multiple name="media[]" id="media" accept="image/png, image/gif, image/jpeg">
                                             </div>
@@ -252,7 +279,8 @@
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <textarea class="form-control" name="seller_notes" id="" cols="30" rows="10">
+                                                <label for="seller_notes">Seller Notes</label>
+                                                <textarea class="form-control" name="seller_notes" id="seller_notes" cols="30" rows="10">
                                                     {!! $car->seller_notes ?? '' !!}
                                                 </textarea>
                                             </div>
@@ -277,22 +305,33 @@
 
 @endsection
 @section('script')
-    <script src="{{ asset('admin/ckeditor/ckeditor.js') }}"></script>
-    <script type="text/javascript">
-        window.onload = function () {
-            CKEDITOR.replace('description', {
-                {{--filebrowserUploadUrl: '{{ route('project.document-image-upload',['_token' => csrf_token() ]) }}',--}}
-                {{--filebrowserUploadMethod: 'form'--}}
-            });
-        };
-    </script>
+{{--    <script src="{{ asset('admin/ckeditor/ckeditor.js') }}"></script>--}}
+{{--    <script type="text/javascript">--}}
+{{--        window.onload = function () {--}}
+{{--            CKEDITOR.replace('description', {--}}
+{{--                --}}{{--filebrowserUploadUrl: '{{ route('project.document-image-upload',['_token' => csrf_token() ]) }}',--}}
+{{--                --}}{{--filebrowserUploadMethod: 'form'--}}
+{{--            });--}}
+{{--        };--}}
+{{--    </script>--}}
 
     <script>
         $(document).ready(function () {
+            //ckeditor
+            ClassicEditor
+                .create( document.querySelector( '#seller_notes' ) )
+                .then( editor => {
+                    console.log( editor );
+                } )
+                .catch( error => {
+                    console.error( error );
+                } );
+
             $('#location').select2();
             $('#condition').select2();
             $('#make_id').select2();
             $('#model_id').select2();
+            $('#body_type').select2();
             $('#fuel_type').select2();
             $('#transmission').select2();
             $('#steering').select2();
@@ -304,6 +343,9 @@
 
                 $('#model_id').val('{{$car->model_id}}');
                 $('#model_id').trigger('change.select2');
+
+                $('#body_type').val('{{$car->body_type}}');
+                $('#body_type').trigger('change.select2');
 
                 $('#fuel_type').val('{{$car->fuel_type}}');
                 $('#fuel_type').trigger('change.select2');

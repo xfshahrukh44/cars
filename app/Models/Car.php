@@ -24,7 +24,9 @@ class Car extends Model
         'drive',
         'engine',
         'sales_price',
-        'seller_notes'
+        'seller_notes',
+        'reference_link',
+        'body_type'
     ];
 
     public function make ()
