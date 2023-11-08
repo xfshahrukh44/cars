@@ -26,7 +26,8 @@ class Car extends Model
         'sales_price',
         'seller_notes',
         'reference_link',
-        'body_type'
+        'body_type',
+        'stock_id'
     ];
 
     public function make ()

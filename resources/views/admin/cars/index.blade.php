@@ -51,6 +51,7 @@
                                     <tr style="text-align: center">
                                         <th>S.No</th>
                                         <th>Image</th>
+                                        <th>Stock ID</th>
                                         <th>Title</th>
                                         <th>Make</th>
                                         <th>Model</th>
@@ -126,6 +127,7 @@
 
                     {data: 'id', name: 'id'},
                     {data: 'image', name: 'image'},
+                    {data: 'stock_id', name: 'stock_id'},
                     {data: 'title', name: 'title'},
                     {data: 'make', name: 'make'},
                     {data: 'model', name: 'model'},

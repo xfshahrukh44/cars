@@ -105,6 +105,12 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
+                                                <input type="text" class="form-control" name="stock_id" id="stock_id" placeholder="Stock ID">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
                                                 <select name="location" id="location" class="form-control">
                                                     <option value="">Location</option>
                                                     @foreach($locations as $location)

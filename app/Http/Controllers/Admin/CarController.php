@@ -24,6 +24,9 @@ class CarController extends Controller
                     ->addColumn('image', function ($data) {
                         return '<img src="'.$data->feature_image().'" width="50" height="50">';
                     })
+                    ->addColumn('stock_id', function ($data) {
+                        return $data->stock_id ?? '';
+                    })
                     ->addColumn('make', function ($data) {
                         return $data->make->name ?? '';
                     })
@@ -69,7 +72,8 @@ class CarController extends Controller
             'sales_price' => $request->sales_price,
             'seller_notes' => $request->seller_notes,
             'reference_link' => $request->reference_link,
-            'body_type' => $request->reference_link,
+            'body_type' => $request->body_type,
+            'stock_id' => $request->stock_id,
         ]);
 
         //media work
@@ -112,6 +116,7 @@ class CarController extends Controller
             'seller_notes' => $request->seller_notes,
             'reference_link' => $request->reference_link,
             'body_type' => $request->body_type,
+            'stock_id' => $request->stock_id,
         ]);
 
         //media work

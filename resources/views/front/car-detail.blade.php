@@ -773,11 +773,11 @@
                         <div class=" stm-row ulisting_element_630_1694715134648">
                             <div class=" stm-col  stm-col-xl-0 stm-col-lg-0 stm-col-md-0 stm-col-sm-0 stm-col-0 ulisting_element_850_1694715134648">
                                 <div class=" ulisting_element_200_1694715392508">
-{{--                                    <div class="attribute_style attribute_style_6">--}}
-{{--                                        <div class="attribute-icon"><i class="stm-all-icon-car-listing"></i></div>--}}
-{{--                                        <div class="attribute-name">Stock Id</div>--}}
-{{--                                        <div class="attribute-value">GCE-0082</div>--}}
-{{--                                    </div>--}}
+                                    <div class="attribute_style attribute_style_6">
+                                        <div class="attribute-icon"><i class="stm-all-icon-car-listing"></i></div>
+                                        <div class="attribute-name">Stock Id</div>
+                                        <div class="attribute-value">{{$car->stock_id ?? 'N/A'}}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
