@@ -33,7 +33,7 @@ class FrontController extends Controller
 
         $cars = Car::query()
         ->when(!is_null($filters['title']), function ($q) use ($filters) { //title
-            return $q->where('title', 'LIKE', '%'.$filters['title'].'%');
+            return $q->where('title', 'LIKE', '%'.$filters['title'].'%')->orWhere('stock_id', 'LIKE', '%'.$filters['title'].'%');
         })
         ->when(!is_null($filters['year_from']), function ($q) use ($filters) { //year_from
             return $q->where('year', '>=', $filters['year_from']);
