@@ -133,13 +133,6 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
-                    <select class="form-control" id="steering" name="steering" style="opacity: 100 !important; visibility: inherit !important;">
-                        <option value="">Steering</option>
-                        <option value="LHD" {!! $filters['steering'] == "LHD" ? 'selected' : '' !!}>LHD</option>
-                        <option value="RHD" {!! $filters['steering'] == "RHD" ? 'selected' : '' !!}>RHD</option>
-                    </select>
-                </div>
-                <div class="col-md-3 form-group">
                     <select class="form-control" id="year_from" name="year_from" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Year From</option>
                         @foreach($years as $year)
@@ -153,6 +146,13 @@
                         @foreach($years as $year)
                             <option value="{{$year}}" {!! $filters['year_to'] == $year ? 'selected' : '' !!}>{{$year}}</option>
                         @endforeach
+                    </select>
+                </div>
+                <div class="col-md-3 form-group">
+                    <select class="form-control" id="steering" name="steering" style="opacity: 100 !important; visibility: inherit !important;">
+                        <option value="">Steering</option>
+                        <option value="LHD" {!! $filters['steering'] == "LHD" ? 'selected' : '' !!}>LHD</option>
+                        <option value="RHD" {!! $filters['steering'] == "RHD" ? 'selected' : '' !!}>RHD</option>
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
