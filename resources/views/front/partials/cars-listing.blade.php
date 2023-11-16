@@ -8,7 +8,7 @@
 
                     <div class=" stm-col  stm-col-xl-3 stm-col-lg-3 stm-col-md-4 stm-col-sm-12 stm-col-12 ulisting_element_120_1580552099500" >
                         <div class='ulisting-thumbnail-panel'>
-                            <a href="{{route('front.carDetail', $car->id)}}" class="ulisting-thumbnail-box-link"></a>
+                            <a href="{{route('front.carDetail', $car->slug)}}" class="ulisting-thumbnail-box-link"></a>
                             <div style=" background-image: url('{{$car->feature_image()}}');
                                 background-repeat: no-repeat;
                                 background-position: center center;
@@ -60,7 +60,7 @@
                                 </div>
                                 <div class=" ulisting_element_220_1580553977879">
                                     {{--//title--}}
-                                    <a class="item-ulisting-title heading-font" href="{{route('front.carDetail', $car->id)}}">
+                                    <a class="item-ulisting-title heading-font" href="{{route('front.carDetail', $car->slug)}}">
                                         {!! $car->title ?? '' !!}
                                     </a>
                                 </div>

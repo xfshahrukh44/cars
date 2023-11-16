@@ -79,9 +79,9 @@ class FrontController extends Controller
         return view('front.search', compact('filters', 'locations', 'makes', 'models', 'cars'));
     }
 
-    public function carDetail (Request $request, $id)
+    public function carDetail (Request $request, $slug)
     {
-        $car = Car::find($id);
+        $car = Car::where('slug', $slug)->first();
 
         return view('front.car-detail', compact('car'));
     }

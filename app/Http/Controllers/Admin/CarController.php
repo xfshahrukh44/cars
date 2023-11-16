@@ -74,6 +74,7 @@ class CarController extends Controller
             'reference_link' => $request->reference_link,
             'body_type' => $request->body_type,
             'stock_id' => $request->stock_id,
+            'slug' => get_car_slug($request->title),
         ]);
 
         //media work

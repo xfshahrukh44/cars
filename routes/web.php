@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\MakeController;
 use App\Http\Controllers\Admin\ModelController;
 use App\Http\Controllers\FrontController;
+use App\Models\Car;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,12 +67,15 @@ Route::namespace('App\Http\Controllers\Admin')->prefix('/admin')->middleware('ad
 
 Route::get('/', [FrontController::class, 'search'])->name('front.search');
 Route::get('/iframe/search-form', [FrontController::class, 'iframeSearchForm'])->name('front.iframeSearchForm');
-Route::get('car/detail/{id}', [FrontController::class, 'carDetail'])->name('front.carDetail');
+Route::get('car/detail/{slug}', [FrontController::class, 'carDetail'])->name('front.carDetail');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/temp', function () {
-//    dd(json_decode(file_get_contents(asset('documents/output.json'))));
+    foreach (Car::whereNull('slug')->get() as $car) {
+        $car->slug = get_car_slug($car->title);
+        $car->save();
+    }
 });
