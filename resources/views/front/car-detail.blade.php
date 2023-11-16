@@ -913,6 +913,7 @@
                                 <div class=" ulisting_element_190_1695108841686">
                                     <div class="attribute_style attribute_style_6">
 {{--                                        <div class="attribute-icon"><i class="fa fa-map-marker"></i></div>--}}
+                                        <div class="attribute-icon"></div>
                                         <div class="attribute-name">Location</div>
                                         <div class="attribute-value">{{$car->location ?? 'N/A'}}</div>
                                     </div>
