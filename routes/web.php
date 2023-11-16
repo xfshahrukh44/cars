@@ -74,8 +74,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/temp', function () {
-    foreach (Car::whereNull('slug')->get() as $car) {
-        $car->slug = get_car_slug($car->title);
-        $car->save();
-    }
+//    foreach (Car::whereNull('slug')->get() as $car) {
+//        $car->slug = get_car_slug($car->title);
+//        $car->save();
+//    }
 });
