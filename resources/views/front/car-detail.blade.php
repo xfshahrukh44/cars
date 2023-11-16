@@ -903,6 +903,7 @@
                                 <div class=" ulisting_element_440_1694719853545">
                                     <div class="attribute_style attribute_style_6">
 {{--                                        <div class="attribute-icon"><i class="stm-all-icon-steering_wheel"></i></div>--}}
+                                        <div class="attribute-icon"></div>
                                         <div class="attribute-name">Steering</div>
                                         <div class="attribute-value">{{$car->steering ?? 'N/A'}}</div>
                                     </div>
