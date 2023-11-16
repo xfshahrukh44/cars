@@ -9,18 +9,18 @@
     <meta property="og:title" content="{{$car->title ?? ''}}">
     <meta property="og:image" content="{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg">
     <meta property="og:description" content>
-    <meta property="og:url" content="{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/">
+    <meta property="og:url" content="{{route('front.carDetail', $car->id)}}/">
     <meta name="twitter:card" content="{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg">
 
     <title>Import used {{$car->title ?? ''}} | GCE Japan</title>
     <meta name="description" content="GCE Japan is a company that offers a wide range of high-quality Japanese used cars. With over 30 brands to choose from, you can find the perfect vehicle for" />
     <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
-    <link rel="canonical" href="{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/" />
+    <link rel="canonical" href="{{route('front.carDetail', $car->id)}}/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Import used {{$car->title ?? ''}} | GCE Japan" />
     <meta property="og:description" content="GCE Japan is a company that offers a wide range of high-quality Japanese used cars. With over 30 brands to choose from, you can find the perfect vehicle for" />
-    <meta property="og:url" content="{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/" />
+    <meta property="og:url" content="{{route('front.carDetail', $car->id)}}/" />
     <meta property="og:site_name" content="GCE Japan" />
     <meta property="og:image" content="{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg" />
     <meta property="og:image:secure_url" content="{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg" />
@@ -33,7 +33,7 @@
     <meta name="twitter:title" content="Import used {{$car->title ?? ''}} | GCE Japan" />
     <meta name="twitter:description" content="GCE Japan is a company that offers a wide range of high-quality Japanese used cars. With over 30 brands to choose from, you can find the perfect vehicle for" />
     <meta name="twitter:image" content="{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg" />
-    <script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["AutoDealer","Organization"],"@id":"{{env('MAIN_SITE_URL')}}/#organization","name":"GCE Japan","url":"{{env('MAIN_SITE_URL')}}","email":"info@testv48.48logo.com","logo":{"@type":"ImageObject","@id":"{{env('MAIN_SITE_URL')}}/#logo","url":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/GCE-01.jpeg","contentUrl":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/GCE-01.jpeg","caption":"GCE Japan","inLanguage":"en","width":"640","height":"296"},"openingHours":["Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 09:00-17:00"],"image":{"@id":"{{env('MAIN_SITE_URL')}}/#logo"},"telephone":"+818090578379"},{"@type":"WebSite","@id":"{{env('MAIN_SITE_URL')}}/#website","url":"{{env('MAIN_SITE_URL')}}","name":"GCE Japan","alternateName":"High Quality Japanese Used Cars For Sale | GCE Japan","publisher":{"@id":"{{env('MAIN_SITE_URL')}}/#organization"},"inLanguage":"en"},{"@type":"ImageObject","@id":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg","url":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg","width":"800","height":"600","inLanguage":"en"},{"@type":"WebPage","@id":"{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/#webpage","url":"{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/","name":"Import used {{$car->title ?? ''}} | GCE Japan","datePublished":"2023-10-05T06:48:16+00:00","dateModified":"2023-10-05T06:48:16+00:00","isPartOf":{"@id":"{{env('MAIN_SITE_URL')}}/#website"},"primaryImageOfPage":{"@id":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg"},"inLanguage":"en"},{"@type":"Person","@id":"{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/#author","name":"admin","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/70a7214ce570526977e468e019f08477?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/70a7214ce570526977e468e019f08477?s=96&amp;d=mm&amp;r=g","caption":"admin","inLanguage":"en"},"sameAs":["{{env('MAIN_SITE_URL')}}"],"worksFor":{"@id":"{{env('MAIN_SITE_URL')}}/#organization"}},{"@type":"Article","headline":"Import used {{$car->title ?? ''}} | GCE Japan","datePublished":"2023-10-05T06:48:16+00:00","dateModified":"2023-10-05T06:48:16+00:00","author":{"@id":"{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/#author","name":"admin"},"publisher":{"@id":"{{env('MAIN_SITE_URL')}}/#organization"},"description":"GCE Japan is a company that offers a wide range of high-quality Japanese used cars. With over 30 brands to choose from, you can find the perfect vehicle for your needs. Visit our website to explore our collection and find your dream car!","name":"Import used {{$car->title ?? ''}} | GCE Japan","@id":"{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/#richSnippet","isPartOf":{"@id":"{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/#webpage"},"image":{"@id":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg"},"inLanguage":"en","mainEntityOfPage":{"@id":"{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/#webpage"}}]}</script>
+    <script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["AutoDealer","Organization"],"@id":"{{env('MAIN_SITE_URL')}}/#organization","name":"GCE Japan","url":"{{env('MAIN_SITE_URL')}}","email":"info@testv48.48logo.com","logo":{"@type":"ImageObject","@id":"{{env('MAIN_SITE_URL')}}/#logo","url":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/GCE-01.jpeg","contentUrl":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/GCE-01.jpeg","caption":"GCE Japan","inLanguage":"en","width":"640","height":"296"},"openingHours":["Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 09:00-17:00"],"image":{"@id":"{{env('MAIN_SITE_URL')}}/#logo"},"telephone":"+818090578379"},{"@type":"WebSite","@id":"{{env('MAIN_SITE_URL')}}/#website","url":"{{env('MAIN_SITE_URL')}}","name":"GCE Japan","alternateName":"High Quality Japanese Used Cars For Sale | GCE Japan","publisher":{"@id":"{{env('MAIN_SITE_URL')}}/#organization"},"inLanguage":"en"},{"@type":"ImageObject","@id":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg","url":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg","width":"800","height":"600","inLanguage":"en"},{"@type":"WebPage","@id":"{{route('front.carDetail', $car->id)}}/#webpage","url":"{{route('front.carDetail', $car->id)}}/","name":"Import used {{$car->title ?? ''}} | GCE Japan","datePublished":"2023-10-05T06:48:16+00:00","dateModified":"2023-10-05T06:48:16+00:00","isPartOf":{"@id":"{{env('MAIN_SITE_URL')}}/#website"},"primaryImageOfPage":{"@id":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg"},"inLanguage":"en"},{"@type":"Person","@id":"{{route('front.carDetail', $car->id)}}/#author","name":"admin","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/70a7214ce570526977e468e019f08477?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/70a7214ce570526977e468e019f08477?s=96&amp;d=mm&amp;r=g","caption":"admin","inLanguage":"en"},"sameAs":["{{env('MAIN_SITE_URL')}}"],"worksFor":{"@id":"{{env('MAIN_SITE_URL')}}/#organization"}},{"@type":"Article","headline":"Import used {{$car->title ?? ''}} | GCE Japan","datePublished":"2023-10-05T06:48:16+00:00","dateModified":"2023-10-05T06:48:16+00:00","author":{"@id":"{{route('front.carDetail', $car->id)}}/#author","name":"admin"},"publisher":{"@id":"{{env('MAIN_SITE_URL')}}/#organization"},"description":"GCE Japan is a company that offers a wide range of high-quality Japanese used cars. With over 30 brands to choose from, you can find the perfect vehicle for your needs. Visit our website to explore our collection and find your dream car!","name":"Import used {{$car->title ?? ''}} | GCE Japan","@id":"{{route('front.carDetail', $car->id)}}/#richSnippet","isPartOf":{"@id":"{{route('front.carDetail', $car->id)}}/#webpage"},"image":{"@id":"{{env('MAIN_SITE_URL')}}/wp-content/uploads/2023/10/eee6ea044cdb42f4a90d40e8ffc842df-2.jpg"},"inLanguage":"en","mainEntityOfPage":{"@id":"{{route('front.carDetail', $car->id)}}/#webpage"}}]}</script>
 
     <link rel="dns-prefetch" href="//js.stripe.com" />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -784,7 +784,7 @@
                         <div class=" stm-row ulisting_element_250_1583384652257">
                             <div class=" stm-col  stm-col-xl-8 stm-col-lg-8 stm-col-md-8 stm-col-sm-12 stm-col-12 ulisting_element_50_1583384652257">
                                 <div class=" ulisting_element_650_1583384674477">
-                                    <a class="item-ulisting-title heading-font" href="{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/">
+                                    <a class="item-ulisting-title heading-font" href="{{route('front.carDetail', $car->id)}}">
                                         {{$car->title ?? ''}} </a>
                                 </div>
                             </div>
@@ -831,12 +831,14 @@
                             </div>
                             <div style="width: 33.333333333333%">
                                 <div class=" ulisting_element_740_1695754545636">
-                                    <div class="ulisting-attribute-template attribute_engine"> <span class="ulisting-attribute-template-icon"><i class="fa fa-car"></i></span> {{$car->engine ?? 'N/A'}} </div> </div>
+{{--                                    <div class="ulisting-attribute-template attribute_engine"> <span class="ulisting-attribute-template-icon"><i class="fa fa-car"></i></span> {{$car->engine ?? 'N/A'}} </div> </div>--}}
+                                    <div class="ulisting-attribute-template attribute_engine"> <span class="ulisting-attribute-template-icon"></span> {{$car->engine ?? 'N/A'}} </div> </div>
                             </div>
                             <div style="width: 33.333333333333%">
                                 <div class=" ulisting_element_520_1583385612319">
                                     <div class="attribute_style attribute_style_6">
-                                        <div class="attribute-icon"><i class="stm-all-icon-date"></i></div>
+{{--                                        <div class="attribute-icon"><i class="stm-all-icon-date"></i></div>--}}
+                                        <div class="attribute-icon"></div>
                                         <div class="attribute-name">Year</div>
                                         <div class="attribute-value">{{$car->year ?? 'N/A'}}</div>
                                     </div>
@@ -863,7 +865,8 @@
                             <div style="width: 33.333333333333%">
                                 <div class=" ulisting_element_890_1583385649929">
                                     <div class="attribute_style attribute_style_6">
-                                        <div class="attribute-icon"><i class="fa fa-adjust"></i></div>
+{{--                                        <div class="attribute-icon"><i class="fa fa-adjust"></i></div>--}}
+                                        <div class="attribute-icon"></div>
                                         <div class="attribute-name">Exterior Color</div>
                                         <div class="attribute-value">{{$car->exteriour_color ?? 'N/A'}}</div>
                                     </div>
@@ -899,7 +902,7 @@
                             <div style="width: 33.333333333333%">
                                 <div class=" ulisting_element_440_1694719853545">
                                     <div class="attribute_style attribute_style_6">
-                                        <div class="attribute-icon"><i class="stm-all-icon-steering_wheel"></i></div>
+{{--                                        <div class="attribute-icon"><i class="stm-all-icon-steering_wheel"></i></div>--}}
                                         <div class="attribute-name">Steering</div>
                                         <div class="attribute-value">{{$car->steering ?? 'N/A'}}</div>
                                     </div>
@@ -908,7 +911,7 @@
                             <div style="width: 33.333333333333%">
                                 <div class=" ulisting_element_190_1695108841686">
                                     <div class="attribute_style attribute_style_6">
-                                        <div class="attribute-icon"><i class="fa fa-map-marker"></i></div>
+{{--                                        <div class="attribute-icon"><i class="fa fa-map-marker"></i></div>--}}
                                         <div class="attribute-name">Location</div>
                                         <div class="attribute-value">{{$car->location ?? 'N/A'}}</div>
                                     </div>
@@ -927,10 +930,10 @@
                             <div class=" stm-col  stm-col-xl-0 stm-col-lg-0 stm-col-md-0 stm-col-sm-0 stm-col-0 ulisting_element_500_1694715468729">
                                 <div class=" ulisting_element_540_1694717224676">
                                     Share Via: </br> <div class="sfsi_plus_widget"><div id="sfsi_plus_wDiv"></div><div class="sfsiplus_norm_row sfsi_plus_wDiv" style="width:225px;position:absolute;;text-align:left"><div style="width:40px; height:auto;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect href="javascript:void(0);" style="width:40px; height:40px;opacity:1;background:#336699;"><img alt="Facebook" title="Facebook" src="{{env('MAIN_SITE_URL')}}/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_fb.png" width="40" height="40" style class="sfcm sfsi_wicon sfsiplusid_round_icon_facebook" data-effect /></a><div class="sfsi_plus_tool_tip_2 sfsi_plus_fb_tool_bdr sfsi_plus_Tlleft sfsiplusid_facebook" style="display:block;width:62px;opacity:0;z-index:-1;"><span class="bot_arow bot_fb_arow"></span><div class="sfsi_plus_inside"><div class="icon3"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftestv48.48logo.com%2Fgce%2Flisting%2Faudi-q7-30-tdi-s-line-quattro-5d" style="display:inline-block;"> <img class="sfsi_wicon" data-pin-nopin="true" width="auto" height="auto" alt="fb-share-icon" title="Facebook Share" src="{{env('MAIN_SITE_URL')}}/wp-content/plugins/ultimate-social-media-plus/images/share_icons/fb_icons/en_US.svg" ' /></a></div></div></div></div></div><div style="width:40px; height:auto;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect href="javascript:void(0);" style="width:40px; height:40px;opacity:1;background:#00ACEC;"><img alt="Twitter" title="Twitter" src="{{env('MAIN_SITE_URL')}}/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_twitter.png" width="40" height="40" style class="sfcm sfsi_wicon sfsiplusid_round_icon_twitter" data-effect /></a><div class="sfsi_plus_tool_tip_2 sfsi_plus_twt_tool_bdr sfsi_plus_Tlleft sfsiplusid_twitter" style="display:block;width:59px;opacity:0;z-index:-1;"><span class="bot_arow bot_twt_arow"></span><div class="sfsi_plus_inside"><div class="icon2"><div class="sf_twiter" style="display: inline-block;vertical-align: middle;width: auto;">
-                                                                    <a target="_blank" href="https://twitter.com/intent/tweet?text=Hey%2C+check+out+this+cool+site+I+found%3A+www.yourname.com+%23Topic+via%40my_twitter_name {{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d" style="display:inline-block">
+                                                                    <a target="_blank" href="https://twitter.com/intent/tweet?text=Hey%2C+check+out+this+cool+site+I+found%3A+www.yourname.com+%23Topic+via%40my_twitter_name {{route('front.carDetail', $car->id)}}" style="display:inline-block">
                                                                         <img nopin="nopin" width="auto" class="sfsi_plus_wicon" src="{{env('MAIN_SITE_URL')}}/wp-content/plugins/ultimate-social-media-plus/images/share_icons/Twitter_Tweet/en_US_Tweet.svg" alt="Tweet" title="Tweet">
                                                                     </a>
-                                                                </div></div></div></div></div></div><div style="width:40px; height:auto;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect target="_blank" href="https://api.whatsapp.com/send?text={{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/" style="width:40px; height:40px;opacity:1;background:#3ED946;"><img alt title src="{{env('MAIN_SITE_URL')}}/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_whatsapp.png" width="40" height="40" style class="sfcm sfsi_wicon sfsiplusid_round_icon_whatsapp" data-effect /></a></div></div></div ><div id="sfsi_holder" class="sfsi_plus_holders" style="position: relative; float: left;width:100%;z-index:-1;"></div ><script></script><div style="clear: both;"></div></div></div>
+                                                                </div></div></div></div></div></div><div style="width:40px; height:auto;margin-left:5px;margin-bottom:5px;" class="sfsi_plus_wicons shuffeldiv "><div class="sfsiplus_inerCnt"><a class=" sficn" data-effect target="_blank" href="https://api.whatsapp.com/send?text={{route('front.carDetail', $car->id)}}/" style="width:40px; height:40px;opacity:1;background:#3ED946;"><img alt title src="{{env('MAIN_SITE_URL')}}/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/flat/flat_whatsapp.png" width="40" height="40" style class="sfcm sfsi_wicon sfsiplusid_round_icon_whatsapp" data-effect /></a></div></div></div ><div id="sfsi_holder" class="sfsi_plus_holders" style="position: relative; float: left;width:100%;z-index:-1;"></div ><script></script><div style="clear: both;"></div></div></div>
                             </div>
                         </div>
                         <div class=" ulisting_element_540_1583393410988">
@@ -1099,7 +1102,7 @@
     var sbiajaxurl = "{{env('MAIN_SITE_URL')}}/wp-admin/admin-ajax.php";
 </script>
 <script>
-    var stm_motors_currentAjaxUrl = '{{env('MAIN_SITE_URL')}}/listing/audi-q7-30-tdi-s-line-quattro-5d/';
+    var stm_motors_currentAjaxUrl = '{{route('front.carDetail', $car->id)}}/';
     var resetAllTxt = 'Reset All';
     var prevText = 'Previous';
     var nextText = 'Next';
