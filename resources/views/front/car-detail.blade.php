@@ -1246,65 +1246,110 @@
     window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['32582051'] = {"default_language":"en","languages":["en","fr","ja","ru","sw"],"url_structure":"none","flag_style":"2d","flag_size":16,"wrapper_selector":"#gt-wrapper-32582051","alt_flags":[],"horizontal_position":"inline","flags_location":"\/gce\/wp-content\/plugins\/gtranslate\/flags\/"};
 </script><script src="{{env('MAIN_SITE_URL')}}/wp-content/plugins/gtranslate/js/fc.js?ver=6.3.2" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/gce/listing/audi-q7-30-tdi-s-line-quattro-5d/" data-gt-orig-domain="testv48.48logo.com" data-gt-widget-id="32582051" defer></script><script type="text/javascript" src="{{env('MAIN_SITE_URL')}}/wp-content/plugins/ulisting/assets/js/frontend/ulisting-quickview.js" id="ulisting-quickview-js"></script>
 <input type="hidden" class="mystickyelement-country-list-hidden" value />
-<div class="mystickyelements-fixed mystickyelements-fixed-widget-0 mystickyelements-position-screen-center mystickyelements-position-mobile-bottom mystickyelements-on-hover mystickyelements-size-medium mystickyelements-mobile-size-medium mystickyelements-position-bottom mystickyelements-templates-default mystickyelements-entry-effect-slide-in" data-custom-position data-custom-position-mobile data-mystickyelement-widget="0" data-widget-time-delay="0" id="mystickyelement-widget-0" data-istimedelay="0">
+<div class="mystickyelements-fixed mystickyelements-fixed-widget-0 mystickyelements-position-screen-center mystickyelements-position-mobile-bottom mystickyelements-on-hover mystickyelements-size-medium mystickyelements-mobile-size-medium mystickyelements-position-bottom mystickyelements-templates-default mystickyelements-entry-effect-slide-in mystickyelements-bottom-social-channel-0 entry-effect" data-custom-position="" data-custom-position-mobile="" data-mystickyelement-widget="0" data-widget-time-delay="0" id="mystickyelement-widget-0" data-istimedelay="0">
     <div class="mystickyelement-lists-wrap">
         <ul class="mystickyelements-lists mysticky" data-mystickyelement-widget="0">
-            <li class="mystickyelements-minimize " data-mystickyelement-widget="0">
-<span class="mystickyelements-minimize minimize-position-bottom minimize-position-mobile-bottom" style="background: #000000">
-&darr; </span>
+            <li class="mystickyelements-minimize" data-mystickyelement-widget="0">
+											<span class="mystickyelements-minimize minimize-position-bottom minimize-position-mobile-bottom" style="background: #000000">
+											↓											</span>
             </li>
-            <li id="mystickyelements-social-whatsapp" class="mystickyelements-social-icon-li mystickyelements-social-whatsapp  element-desktop-on element-mobile-on">
+
+            <li id="mystickyelements-social-whatsapp" class="mystickyelements-social-icon-li mystickyelements-social-whatsapp element-desktop-on element-mobile-on">
                 <style>
                 </style>
-                <span class="mystickyelements-social-icon social-whatsapp social-custom" data-tab-setting="hover" data-tab-setting="hover" data-mobile-behavior="enable" data-click="0" data-flyout="disable" style="background: #26D367">
-<a href="https://api.whatsapp.com/send?phone=api.whatsapp.com/send?phone=819092296752&#038;text=GCE%20Japan" target="_blank" rel="noopener" data-url="https://api.whatsapp.com/send?phone=api.whatsapp.com/send?phone=819092296752&#038;text=GCE%20Japan" data-tab-setting="hover" data-mobile-behavior="enable" data-flyout="disable">
-<i class="fab fa-whatsapp"></i>
-<span class="mystickyelements-icon-below-text" style>JP</span> </a>
-</span>
+                <span class="mystickyelements-social-icon social-whatsapp social-custom" data-tab-setting="hover" data-mobile-behavior="disable" data-click="0" data-flyout="disable" style="background: #26D367">
+																											<a href="https://api.whatsapp.com/send?phone=819092296752" target="_blank" rel="noopener" data-url="https://api.whatsapp.com/send?phone=819092296752" data-tab-setting="hover" data-mobile-behavior="disable" data-flyout="disable">
+																													<i class="fab fa-whatsapp"></i>
+															<span class="mystickyelements-icon-below-text" style="">JP</span>														</a>
+																									</span>
+
                 <span class="mystickyelements-social-text " style="background: #26D367;" data-flyout="disable">
-<a href="https://api.whatsapp.com/send?phone=api.whatsapp.com/send?phone=819092296752&#038;text=GCE%20Japan" target="_blank" rel="noopener" data-flyout="disable">
-WhatsApp JP </a>
-</span>
+																										<a href="https://api.whatsapp.com/send?phone=819092296752" target="_blank" rel="noopener" data-flyout="disable">
+													WhatsApp JP																											</a>
+																								</span>
+
             </li>
-            <li id="mystickyelements-social-custom_channel_2" class="mystickyelements-social-icon-li mystickyelements-social-custom_channel_2  element-desktop-on element-mobile-on">
+
+            <li id="mystickyelements-social-custom_channel_2" class="mystickyelements-social-icon-li mystickyelements-social-custom_channel_2 element-desktop-on element-mobile-on">
                 <style>
                 </style>
-                <span class="mystickyelements-social-icon social-custom_channel_2 social-custom" data-tab-setting="hover" data-tab-setting="hover" data-mobile-behavior="enable" data-click="0" data-flyout="disable" style="background: #26d367">
-<a href="https://wa.me/447520637371/?text=GCE%20UK" target="_blank" rel="noopener" data-url="https://wa.me/447520637371/?text=GCE%20UK" data-tab-setting="hover" data-mobile-behavior="enable" data-flyout="disable">
-<i class="fab fa-whatsapp" style="color:#ffffff"></i>
-<span class="mystickyelements-icon-below-text" style>UK</span> </a>
-</span>
+                <span class="mystickyelements-social-icon social-custom_channel_2 social-custom" data-tab-setting="hover" data-mobile-behavior="disable" data-click="0" data-flyout="disable" style="background: #26d367">
+																											<a href="https://api.whatsapp.com/send?phone=447774899113" target="_blank" rel="noopener" data-url="https://api.whatsapp.com/send?phone=447774899113" data-tab-setting="hover" data-mobile-behavior="disable" data-flyout="disable">
+																													<i class="fab fa-whatsapp" style="color:#ffffff"></i>
+															<span class="mystickyelements-icon-below-text" style="">UK</span>														</a>
+																									</span>
+
                 <span class="mystickyelements-social-text " style="background: #26d367;color: #ffffff;" data-flyout="disable">
-<a href="https://wa.me/447520637371/?text=GCE%20UK" target="_blank" rel="noopener" style="color:#ffffff" data-flyout="disable">
-WhatsApp UK </a>
-</span>
+																										<a href="https://api.whatsapp.com/send?phone=447774899113" target="_blank" rel="noopener" style="color:#ffffff" data-flyout="disable">
+													WhatsApp UK																											</a>
+																								</span>
+
             </li>
-            <li id="mystickyelements-social-facebook" class="mystickyelements-social-icon-li mystickyelements-social-facebook  element-desktop-on element-mobile-on">
+
+            <li id="mystickyelements-social-facebook" class="mystickyelements-social-icon-li mystickyelements-social-facebook element-desktop-on">
                 <style>
                 </style>
-                <span class="mystickyelements-social-icon social-facebook social-custom" data-tab-setting="hover" data-tab-setting="hover" data-mobile-behavior="enable" data-click="0" data-flyout="disable" style="background: #4267B2">
-<a href="https://www.facebook.com/GCEJapanCo?mibextid=ZbWKwL" target="_blank" rel="noopener" data-url="https://www.facebook.com/GCEJapanCo?mibextid=ZbWKwL" data-tab-setting="hover" data-mobile-behavior="enable" data-flyout="disable">
-<i class="fab fa-facebook-f"></i>
-</a>
-</span>
+                <span class="mystickyelements-social-icon social-facebook social-custom" data-tab-setting="hover" data-mobile-behavior="disable" data-click="0" data-flyout="disable" style="background: #4267B2">
+																											<a href="https://www.facebook.com/gcejapanjp/" target="_blank" rel="noopener" data-url="https://www.facebook.com/gcejapanjp/" data-tab-setting="hover" data-mobile-behavior="disable" data-flyout="disable">
+																													<i class="fab fa-facebook-f"></i>
+																													</a>
+																									</span>
+
                 <span class="mystickyelements-social-text " style="background: #4267B2;" data-flyout="disable">
-<a href="https://www.facebook.com/GCEJapanCo?mibextid=ZbWKwL" target="_blank" rel="noopener" data-flyout="disable">
-Facebook </a>
-</span>
+																										<a href="https://www.facebook.com/gcejapanjp/" target="_blank" rel="noopener" data-flyout="disable">
+													Facebook																											</a>
+																								</span>
+
             </li>
-            <li id="mystickyelements-social-youtube" class="mystickyelements-social-icon-li mystickyelements-social-youtube  element-desktop-on element-mobile-on">
+
+            <li id="mystickyelements-social-youtube" class="mystickyelements-social-icon-li mystickyelements-social-youtube element-desktop-on">
                 <style>
                 </style>
-                <span class="mystickyelements-social-icon social-youtube social-custom" data-tab-setting="hover" data-tab-setting="hover" data-mobile-behavior="enable" data-click="0" data-flyout="disable" style="background: #F54E4E">
-<a href="https://www.youtube.com/@GCEJapanGlobalCarExporter/featured" target="_blank" rel="noopener" data-url="https://www.youtube.com/@GCEJapanGlobalCarExporter/featured" data-tab-setting="hover" data-mobile-behavior="enable" data-flyout="disable">
-<i class="fab fa-youtube"></i>
-</a>
-</span>
+                <span class="mystickyelements-social-icon social-youtube social-custom" data-tab-setting="hover" data-mobile-behavior="disable" data-click="0" data-flyout="disable" style="background: #F54E4E">
+																											<a href="https://www.youtube.com/@GCEJapanGlobalCarExporter/featured" target="_blank" rel="noopener" data-url="https://www.youtube.com/@GCEJapanGlobalCarExporter/featured" data-tab-setting="hover" data-mobile-behavior="disable" data-flyout="disable">
+																													<i class="fab fa-youtube"></i>
+																													</a>
+																									</span>
+
                 <span class="mystickyelements-social-text " style="background: #F54E4E;" data-flyout="disable">
-<a href="https://www.youtube.com/@GCEJapanGlobalCarExporter/featured" target="_blank" rel="noopener" data-flyout="disable">
-YouTube </a>
-</span>
+																										<a href="https://www.youtube.com/@GCEJapanGlobalCarExporter/featured" target="_blank" rel="noopener" data-flyout="disable">
+													YouTube																											</a>
+																								</span>
+
             </li>
+
+            <li id="mystickyelements-social-facebook_messenger" class="mystickyelements-social-icon-li mystickyelements-social-facebook_messenger element-desktop-on element-mobile-on">
+                <style>
+                </style>
+                <span class="mystickyelements-social-icon social-facebook_messenger social-custom" data-tab-setting="hover" data-mobile-behavior="disable" data-click="0" data-flyout="disable" style="background: #007FF7">
+																											<a href="https://m.me/gcejapanjp" data-url="https://m.me/gcejapanjp" data-tab-setting="hover" data-mobile-behavior="disable" data-flyout="disable">
+																													<i class="fab fa-facebook-messenger"></i>
+																													</a>
+																									</span>
+
+                <span class="mystickyelements-social-text " style="background: #007FF7;" data-flyout="disable">
+																										<a href="https://m.me/gcejapanjp" data-flyout="disable">
+													Facebook Messenger																											</a>
+																								</span>
+
+            </li>
+
+            <li id="mystickyelements-social-custom_channel_3" class="mystickyelements-social-icon-li mystickyelements-social-custom_channel_3 element-desktop-on element-mobile-on">
+                <style>
+                </style>
+                <span class="mystickyelements-social-icon social-custom_channel_3 social-custom" data-tab-setting="hover" data-mobile-behavior="disable" data-click="0" data-flyout="disable" style="background: rgb(53, 187, 255); border-top-right-radius: 10px;">
+																											<a href="https://join.skype.com/invite/sHTAtPN393dy" data-url="https://join.skype.com/invite/sHTAtPN393dy" data-tab-setting="hover" data-mobile-behavior="disable" data-flyout="disable">
+																													<i class="fab fa-skype"></i>
+																													</a>
+																									</span>
+
+                <span class="mystickyelements-social-text " style="background: #35bbff;" data-flyout="disable">
+																										<a href="https://join.skype.com/invite/sHTAtPN393dy" data-flyout="disable">
+													Custom Link																											</a>
+																								</span>
+
+            </li>
+
         </ul>
     </div>
 </div>
