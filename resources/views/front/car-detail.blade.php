@@ -868,7 +868,7 @@
 {{--                                        <div class="attribute-icon"><i class="fa fa-adjust"></i></div>--}}
                                         <div class="attribute-icon"></div>
                                         <div class="attribute-name">Exterior Color</div>
-                                        <div class="attribute-value">{{$car->exteriour_color ?? 'N/A'}}</div>
+                                        <div class="attribute-value">{{$car->exterior_color ?? 'N/A'}}</div>
                                     </div>
                                 </div>
                             </div>

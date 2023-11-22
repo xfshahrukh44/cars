@@ -431,7 +431,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
-                    <input class="form-control" type="text" id="search" name="title" placeholder="Search" style="max-height: 34px;">
+                    <input class="form-control" type="text" id="search" name="title" placeholder="Search" style="max-height: 36px; background: white;">
                 </div>
                 <div class="col-md-3 form-group">
                     <select class="form-control" id="make_id" name="make_id" style="opacity: 100 !important; visibility: inherit !important;">
@@ -510,7 +510,7 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
-                    <select class="form-control" id="steering" name="steering" style="opacity: 100 !important; visibility: inherit !important;">
+                    <select class="form-control" id="steering" name="teering" style="opacity: 100 !important; visibility: inherit !important;">
                         <option value="">Steering</option>
                         <option value="LHD">LHD</option>
                         <option value="RHD">RHD</option>
@@ -533,15 +533,16 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
-                    <select class="form-control" id="engine" name="engine" style="opacity: 100 !important; visibility: inherit !important;">
-                        <option value="">Engine</option>
-                        <option value="1000">1000</option>
-                        <option value="1500">1500</option>
-                        <option value="2000">2000</option>
-                        <option value="3000">3000</option>
-                        <option value="4000">4000</option>
-                        <option value="5000">5000</option>
-                    </select>
+                    <input type="text" class="form-control" name="engine">
+{{--                    <select class="form-control" id="engine" name="engine" style="opacity: 100 !important; visibility: inherit !important;">--}}
+{{--                        <option value="">Engine</option>--}}
+{{--                        <option value="1000">1000</option>--}}
+{{--                        <option value="1500">1500</option>--}}
+{{--                        <option value="2000">2000</option>--}}
+{{--                        <option value="3000">3000</option>--}}
+{{--                        <option value="4000">4000</option>--}}
+{{--                        <option value="5000">5000</option>--}}
+{{--                    </select>--}}
                 </div>
                 <div class="col-md-12 form-group">
                     <button type="submit" id="asd">Search</button>
