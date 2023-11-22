@@ -830,9 +830,13 @@
                                 </div>
                             </div>
                             <div style="width: 33.333333333333%">
-                                <div class=" ulisting_element_740_1695754545636">
-{{--                                    <div class="ulisting-attribute-template attribute_engine"> <span class="ulisting-attribute-template-icon"><i class="fa fa-car"></i></span> {{$car->engine ?? 'N/A'}} </div> </div>--}}
-                                    <div class="ulisting-attribute-template attribute_engine"> <span class="ulisting-attribute-template-icon"></span> {{$car->engine ?? 'N/A'}} </div> </div>
+                                <div class=" ulisting_element_650_1583385603263">
+                                    <div class="attribute_style attribute_style_6">
+                                        <div class="attribute-icon"></div>
+                                        <div class="attribute-name">Engine</div>
+                                        <div class="attribute-value">{{$car->engine ?? 'N/A'}}</div>
+                                    </div>
+                                </div>
                             </div>
                             <div style="width: 33.333333333333%">
                                 <div class=" ulisting_element_520_1583385612319">

@@ -172,7 +172,7 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
-                    <input type="text" class="form-control" name="engine" placeholder="Engine" style="max-height: 36px; background: white;">
+                    <input type="text" class="form-control" name="engine" value="{{$filters['engine']}}" placeholder="Engine" style="max-height: 36px; background: white;">
 {{--                    <select class="form-control" id="engine" name="engine" style="opacity: 100 !important; visibility: inherit !important;">--}}
 {{--                        <option value="">Engine</option>--}}
 {{--                        <option value="1000" {!! $filters['engine'] == "1000" ? 'selected' : '' !!}>1000</option>--}}
