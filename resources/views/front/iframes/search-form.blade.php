@@ -533,7 +533,7 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
-                    <input type="text" class="form-control m-atuo" name="engine" placeholder="Engine" id="engine" style="max-height: 36px; background: white;">
+                    <input type="text" class="form-control m-auto" name="engine" placeholder="Engine" id="engine" style="max-height: 36px; background: white;">
 {{--                    <select class="form-control" id="engine" name="engine" style="opacity: 100 !important; visibility: inherit !important;">--}}
 {{--                        <option value="">Engine</option>--}}
 {{--                        <option value="1000">1000</option>--}}
