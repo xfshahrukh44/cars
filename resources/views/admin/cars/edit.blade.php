@@ -242,14 +242,15 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="engine" id="engine" class="form-control">
-                                                    <option value="">Engine</option>
-                                                    <option value="1000" {{$car->condition == "1000" ? 'selected' : ''}}>1000</option>
-                                                    <option value="1500" {{$car->condition == "1500" ? 'selected' : ''}}>1500</option>
-                                                    <option value="2000" {{$car->condition == "2000" ? 'selected' : ''}}>2000</option>
-                                                    <option value="4000" {{$car->condition == "4000" ? 'selected' : ''}}>4000</option>
-                                                    <option value="5000" {{$car->condition == "5000" ? 'selected' : ''}}>5000</option>
-                                                </select>
+                                                <input type="text" class="form-control" name="engine" placeholder="Engine" value="{{$car->condition}}">
+{{--                                                <select name="engine" id="engine" class="form-control">--}}
+{{--                                                    <option value="">Engine</option>--}}
+{{--                                                    <option value="1000" {{$car->condition == "1000" ? 'selected' : ''}}>1000</option>--}}
+{{--                                                    <option value="1500" {{$car->condition == "1500" ? 'selected' : ''}}>1500</option>--}}
+{{--                                                    <option value="2000" {{$car->condition == "2000" ? 'selected' : ''}}>2000</option>--}}
+{{--                                                    <option value="4000" {{$car->condition == "4000" ? 'selected' : ''}}>4000</option>--}}
+{{--                                                    <option value="5000" {{$car->condition == "5000" ? 'selected' : ''}}>5000</option>--}}
+{{--                                                </select>--}}
                                             </div>
                                         </div>
 

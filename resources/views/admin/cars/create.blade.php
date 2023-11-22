@@ -242,14 +242,15 @@
 
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <select name="engine" id="engine" class="form-control">
-                                                    <option value="">Engine</option>
-                                                    <option value="1000">1000</option>
-                                                    <option value="1500">1500</option>
-                                                    <option value="2000">2000</option>
-                                                    <option value="4000">4000</option>
-                                                    <option value="5000">5000</option>
-                                                </select>
+                                                <input type="text" class="form-control" name="engine" placeholder="Engine">
+{{--                                                <select name="engine" id="engine" class="form-control">--}}
+{{--                                                    <option value="">Engine</option>--}}
+{{--                                                    <option value="1000">1000</option>--}}
+{{--                                                    <option value="1500">1500</option>--}}
+{{--                                                    <option value="2000">2000</option>--}}
+{{--                                                    <option value="4000">4000</option>--}}
+{{--                                                    <option value="5000">5000</option>--}}
+{{--                                                </select>--}}
                                             </div>
                                         </div>
 

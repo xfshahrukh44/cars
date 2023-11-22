@@ -70,7 +70,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
-                    <input class="form-control" type="text" id="search" name="title" value="{{$filters['title']}}" placeholder="Search" style="max-height: 34px;">
+                    <input class="form-control" type="text" id="search" name="title" value="{{$filters['title']}}" placeholder="Search" style="max-height: 36px; background: white;">
                 </div>
                 <div class="col-md-3 form-group">
                     <select class="form-control" id="make_id" name="make_id" style="opacity: 100 !important; visibility: inherit !important;">
@@ -172,15 +172,16 @@
                     </select>
                 </div>
                 <div class="col-md-3 form-group">
-                    <select class="form-control" id="engine" name="engine" style="opacity: 100 !important; visibility: inherit !important;">
-                        <option value="">Engine</option>
-                        <option value="1000" {!! $filters['engine'] == "1000" ? 'selected' : '' !!}>1000</option>
-                        <option value="1500" {!! $filters['engine'] == "1500" ? 'selected' : '' !!}>1500</option>
-                        <option value="2000" {!! $filters['engine'] == "2000" ? 'selected' : '' !!}>2000</option>
-                        <option value="3000" {!! $filters['engine'] == "3000" ? 'selected' : '' !!}>3000</option>
-                        <option value="4000" {!! $filters['engine'] == "4000" ? 'selected' : '' !!}>4000</option>
-                        <option value="5000" {!! $filters['engine'] == "5000" ? 'selected' : '' !!}>5000</option>
-                    </select>
+                    <input type="text" class="form-control" name="engine" placeholder="Engine" style="max-height: 36px; background: white;">
+{{--                    <select class="form-control" id="engine" name="engine" style="opacity: 100 !important; visibility: inherit !important;">--}}
+{{--                        <option value="">Engine</option>--}}
+{{--                        <option value="1000" {!! $filters['engine'] == "1000" ? 'selected' : '' !!}>1000</option>--}}
+{{--                        <option value="1500" {!! $filters['engine'] == "1500" ? 'selected' : '' !!}>1500</option>--}}
+{{--                        <option value="2000" {!! $filters['engine'] == "2000" ? 'selected' : '' !!}>2000</option>--}}
+{{--                        <option value="3000" {!! $filters['engine'] == "3000" ? 'selected' : '' !!}>3000</option>--}}
+{{--                        <option value="4000" {!! $filters['engine'] == "4000" ? 'selected' : '' !!}>4000</option>--}}
+{{--                        <option value="5000" {!! $filters['engine'] == "5000" ? 'selected' : '' !!}>5000</option>--}}
+{{--                    </select>--}}
                 </div>
                 <div class="col-md-12 form-group">
                     <button type="submit">Search</button>
