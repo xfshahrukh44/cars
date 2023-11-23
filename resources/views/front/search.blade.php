@@ -989,24 +989,7 @@
     var getFileSize        = '825c359320';
     var sellOnlineNonce    = '8f32cbb936';
 </script>
-<script type="text/html" id="wpb-modifications"></script><div
-    id="hustle-slidein-id-1"
-    class="hustle-ui hustle-slidein hustle-palette--6518f599da5c51_00273468 hustle_module_id_1 module_id_1  "
-
-    data-id="1"
-    data-render-id="0"
-    data-tracking="enabled"
-
-    role="dialog"
-    aria-modal="true"
-    data-position="s"
-    data-close-delay="false"
-
-    style="opacity: 0;"
-><div class="hustle-slidein-content"><div class="hustle-optin hustle-optin--focus-content"><div class="hustle-success" data-close-delay="false" style="display: none;"><span class="hustle-icon-check" aria-hidden="true"></span><div class="hustle-success-content"></div></div><div class="hustle-layout"><div class="hustle-main-wrapper"><button class="hustle-button-icon hustle-button-close has-background">
-                        <span class="hustle-icon-close" aria-hidden="true"></span>
-                        <span class="hustle-screen-reader">Close this module</span>
-                    </button><div class="hustle-layout-body"><div class="hustle-layout-content"><div class="hustle-content"><div class="hustle-content-wrap"><div class="hustle-group-title"><span class="hustle-title">Subscribe</span><span class="hustle-subtitle">Get the latest updates</span></div></div></div></div><div class="hustle-layout-sidebar"><form class="hustle-layout-form" novalidate="novalidate"><div class="hustle-form"><div class="hustle-form-fields hustle-proximity-separated"><div class="hustle-field hustle-field-icon--static "><label for="hustle-field-name-module-1" id="hustle-field-name-module-1-label" class="hustle-screen-reader">Name</label><input id="hustle-field-name-module-1" type="name" class="hustle-input " name="name" value="" aria-labelledby="hustle-field-name-module-1-label" data-validate="" /><span class="hustle-input-label" aria-hidden="true" style="flex-flow: row nowrap;"><span class="hustle-icon-name"></span><span>Name</span></span></div><div class="hustle-field hustle-field-icon--static hustle-field-required "><label for="hustle-field-email-module-1" id="hustle-field-email-module-1-label" class="hustle-screen-reader">Email</label><input id="hustle-field-email-module-1" type="email" class="hustle-input " name="email" value="" aria-labelledby="hustle-field-email-module-1-label" data-validate="1" /><span class="hustle-input-label" aria-hidden="true" style="flex-flow: row nowrap;"><span class="hustle-icon-email"></span><span>Enter your email address</span></span></div><div class="hustle-field hustle-field-icon--static "><label for="hustle-field-phone-module-1" id="hustle-field-phone-module-1-label" class="hustle-screen-reader">Phone Number</label><input id="hustle-field-phone-module-1" type="text" class="hustle-input " name="phone" value="" aria-labelledby="hustle-field-phone-module-1-label" data-validate="" data-type="phone"/><span class="hustle-input-label" aria-hidden="true" style="flex-flow: row nowrap;"><span class="hustle-icon-phone"></span><span>Phone Number</span></span></div><button class="hustle-button hustle-button-submit " aria-live="polite" data-loading-text="Form is being submitted, please wait a bit."><span class="hustle-button-text">Get Subscribed</span><span class="hustle-icon-loader hustle-loading-icon" aria-hidden="true"></span></button></div></div><input type="hidden" name="hustle_module_id" value="1"><input type="hidden" name="post_id" value="889"><div class="hustle-error-message" style="display: none;" data-default-error="Something went wrong, please try again."></div></form></div></div></div></div></div></div></div><link rel='stylesheet' id='vc_google_fonts_montserratregular700-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700&#038;ver=6.5.0' type='text/css' media='all' />
+<script type="text/html" id="wpb-modifications"></script>
 <link rel='stylesheet' id='ulisting_builder_stytle_ulisting_type_page_layout_0-css'  href='{{env('MAIN_SITE_URL')}}/wp-content/uploads/ulisting/css/888/ulisting_type_page_layout_0.css?ver=6.0.2' type='text/css' media='all' />
 <link rel='stylesheet' id='ulisting_builder_stytle_ulisting_item_card_888_list-css'  href='{{env('MAIN_SITE_URL')}}/wp-content/uploads/ulisting/css/ulisting_item_card_888_list.css?ver=6.0.2' type='text/css' media='all' />
 <link rel='stylesheet' id='hustle_icons-css'  href='{{env('MAIN_SITE_URL')}}/wp-content/plugins/wordpress-popup/assets/hustle-ui/css/hustle-icons.min.css?ver=4.8.2' type='text/css' media='all' />
