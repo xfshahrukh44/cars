@@ -33,7 +33,27 @@ class FrontController extends Controller
 
         $cars = Car::query()
         ->when(!is_null($filters['title']), function ($q) use ($filters) { //title
-            return $q->where('title', 'LIKE', '%'.$filters['title'].'%')->orWhere('stock_id', 'LIKE', '%'.$filters['title'].'%');
+            return $q->where('title', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('stock_id', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('location', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('condition', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhereHas('model', function ($q) use ($filters) {
+                    return $q->where('name', 'LIKE', '%'.$filters['title'].'%')
+                        ->orWhereHas('make', function ($q) use ($filters) {
+                        return $q->where('name', 'LIKE', '%'.$filters['title'].'%');
+                    });
+                })
+                ->orWhere('mileage', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('year', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('exterior_color', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('fuel_type', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('transmission', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('steering', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('drive', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('engine', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('body_type', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('stock_id', 'LIKE', '%'.$filters['title'].'%')
+                ->orWhere('slug', 'LIKE', '%'.$filters['title'].'%');
         })
         ->when(!is_null($filters['year_from']), function ($q) use ($filters) { //year_from
             return $q->where('year', '>=', $filters['year_from']);
