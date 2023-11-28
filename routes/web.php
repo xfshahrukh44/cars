@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\MakeController;
 use App\Http\Controllers\Admin\ModelController;
 use App\Http\Controllers\FrontController;
 use App\Models\Car;
+use App\Models\CarModel;
+use App\Models\Make;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -74,6 +76,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/temp', function () {
+    Car::truncate();
+    Make::truncate();
+    CarModel::truncate();
 //    foreach (Car::whereNull('slug')->get() as $car) {
 //        $car->slug = get_car_slug($car->title);
 //        $car->save();
